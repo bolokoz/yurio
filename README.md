@@ -2,7 +2,7 @@
 
 Sakai Nuxt is a Nuxt-based application template derived from the original [Sakai Vue](https://github.com/primefaces/sakai-vue) project. This template enhances the development experience by leveraging Nuxt features like server-side rendering (SSR), static site generation (SSG), and seamless file-based routing.
 
-Live Demo: [sakai-nuxt.web.app](https://sakai-nuxt.netlify.app)
+Live Demo: [sakai-nuxt.netlify.app](https://sakai-nuxt.netlify.app)
 
 ## Overview
 
