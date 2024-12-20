@@ -26,4 +26,20 @@ export default defineNuxtConfig({
         }
     },
     plugins: ['~/plugins/primevue.js'],
+    app: {
+        head: {
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1',
+            title: 'Sakai PrimeVue - Nuxt'
+        },
+    },
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    silenceDeprecations: ['legacy-js-api'],
+                },
+            }
+        }
+    },
 })
