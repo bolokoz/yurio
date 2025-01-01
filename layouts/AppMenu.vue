@@ -15,6 +15,17 @@ const model = ref([
         label: 'Projects',
         items: [
             { label: 'Parmegianologo', icon: 'pi pi-fw pi-food', to: '/parmegianologo' },
+            {
+                label: 'Engenharia',
+                icon: 'pi pi-fw pi-user',
+                items: [
+                    {
+                        label: 'Calculadora',
+                        icon: 'pi pi-fw pi-sign-in',
+                        to: '/notes/eng/calculadora'
+                    }
+                ]
+            },
             { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
             { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
             { label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/uikit/button', class: 'rotated-icon' },
