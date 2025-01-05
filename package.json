@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/content": "3.0.0-alpha.8",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@primevue/themes": "^4.2.2",
     "chart.js": "4.4.6",

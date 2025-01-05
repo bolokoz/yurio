@@ -4,7 +4,7 @@ import Theme from '@primevue/themes/aura';
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
-    modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss'],
+    modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@nuxt/content'],
     css: [
         '@/assets/styles.scss'
     ],
