@@ -4,7 +4,7 @@ import Theme from '@primevue/themes/aura';
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
-    modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@nuxt/content'],
+    modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxtjs/supabase'],
     css: [
         '@/assets/styles.scss'
     ],
@@ -14,6 +14,12 @@ export default defineNuxtConfig({
             autoprefixer: {}
         }
     },
+    supabase: {
+        redirectOptions: {
+            login: '/auth/login',
+            callback: '/auth/confirm',
+          }
+      },
     primevue: {
         options: {
             ripple: true,

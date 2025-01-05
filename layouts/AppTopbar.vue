@@ -70,7 +70,9 @@ const { onMenuToggle, toggleDarkMode, isDarkTheme } = useLayout();
                     </button>
                     <button type="button" class="layout-topbar-action">
                         <i class="pi pi-user"></i>
-                        <span>Profile</span>
+                        <NuxtLink to="/auth/login">
+                        <span>Login</span>
+                        </NuxtLink>
                     </button>
                 </div>
             </div>
