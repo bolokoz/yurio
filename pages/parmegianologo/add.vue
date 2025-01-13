@@ -65,25 +65,6 @@ const search = (event) => {
   }, 250);
 };
 
-const onFormSubmit = ({ valid }) => {
-  if (valid) {
-    toast.add({
-      severity: "success",
-      summary: "Form is submitted.",
-      life: 3000,
-    });
-  }
-};
-
-const onAdvancedUpload = () => {
-  toast.add({
-    severity: "info",
-    summary: "Success",
-    detail: "File Uploaded",
-    life: 3000,
-  });
-};
-
 const addRestaurantModal = ref(false);
 
 const addRestaurant = async () => {
@@ -126,41 +107,67 @@ const addRestaurant = async () => {
 //   console.log(selectedTemplate.value);
 // }
 
+const onUpload = () => toast.add({ severity: "info", summary: "File Uploaded", life: 3000 });
+
+async function upload2(e) {
+    const file = e.files[0]
+    const filename = `file_${e}_${e.name}`;
+    toast.add({ severity: 'info', summary: `uploading ${filename}`, life: 3000 });
+        await client.storage.from('parmegianas').upload(filename, file, {
+            contentType: 'image/**',
+        })
+}
+
+const files = ref<File[]>([])
+function uploadFiles() {
+    files.value.forEach(async (element: File, index: number) => {
+        const filename = `file_${index}_${element.name}`;
+        toast.add({ severity: 'info', summary: `uploading ${filename}`, life: 3000 });
+        await client.storage.from('parmegianas').upload(filename, element, {
+            contentType: 'image/**',
+        }).then(res => {
+            toast.add({ severity: 'success', summary: `File ${filename} uploaded`, life: 3000 });
+            if (res?.data?.fullPath) {
+                form.files.push(res.data.fullPath);
+            }
+        }).catch(err => {
+            toast.add({ severity: 'info', summary: `${err}`, life: 3000 });
+    })
+    })
+}
+
 const comments = computed(() => {
     let summary = `
     Review de Parmegiana
-    Restaurente: ${selectedRestaurante.value?.nome || ''}
-    Prato: ${form.prato} \n
+    Restaurante: ${form.selectedRestaurante?.nome || ''}
+    Prato: ${form.prato}
+    Preço: R$ ${form.preco} \n
     Carne e crosta: ${form.carne}/5
     ${form.obs_carne} \n
     Molho: ${form.molho}/5
     ${form.obs_molho} \n
-    Acompanhamentos: ${form.acompanhamentos}/5
+    Acompanhamentos e apresentação: ${form.acompanhamentos}/5
     ${form.obs_acompanhamentos} \n
-    Ambiente e atendimento: ${form.restaurante}/5
+    Ambiente, atendimento e preços: ${form.restaurante}/5
     ${form.obs_restaurante} \n
-    Conclusões: ${form.preco}/5
-    ${form.obs_preco} \n
     `
     return summary
 })
 
 const form = reactive({
-    selectedRestaurante: null,
+    selectedRestaurante: null as Restaurante | null,
     carne: 2,
     molho: 2,
     acompanhamentos:3,
     restaurante:3,
-    preco:25,
+    preco:85,
     particular:2,
     obs_carne:'Ponto estava perfeito, suculenta e bem temperada. A crosta estava crocante',
   obs_molho:'Bastante molho e bem temperado. ',
-  obs_acompanhamentos:'Acompanhamentos bem feitos e saborosos',
-  obs_restaurante:'Ambiente agradável, atendimento rápido e cordial',
-  obs_preco:'Serve bem 2 pessoas, preço justo',
-  obs_particular:'Achei o prato um pouco salgado',
+  obs_acompanhamentos:'Acompanhamentos bem feitos e saborosos. Pratos bem apresentados',
+  obs_restaurante:'Ambiente agradável, atendimento rápido e cordial. Preço justo, serve bem 2 pessoas',
     prato: 'Filé Parmegiana',
-    files: null,
+    files: [] as string[],
 })
 
 const initialValues = ref({
@@ -178,6 +185,21 @@ const initialValues = ref({
   obs_particular:'Achei o prato um pouco salgado',
   prato: 'TESTE',
 });
+
+const onFormSubmit = (e) => {
+    // e.originalEvent: Represents the native form submit event.
+    // e.valid: A boolean that indicates whether the form is valid or not.
+    // e.states: Contains the current state of each form field, including validity status.
+    // e.errors: An object that holds any validation errors for the invalid fields in the form.
+    // e.values: An object containing the current values of all form fields.
+    // e.reset: A function that resets the form to its initial state.
+
+    if (e.valid) {
+        // toast.add({ severity: 'success', summary: e.values, life: 3000 });
+        toast.add({ severity: 'success', summary: 'Form Submitted', detail: JSON.stringify(form), life: 3000 });
+    }
+};
+
 </script>
 
 <template>
@@ -188,14 +210,15 @@ const initialValues = ref({
       :initialValues="initialValues"
       class="flex justify-center flex-col gap-4 w-full md:w-56"
     >
-      <div class="flex flex-col gap-1">
+      <div class="flex flex-col gap-4 mb-4">
         <AutoComplete
           name="restaurante"
           optionLabel="nome"
           placeholder="Restaurante"
           dropdown
           :suggestions="filteredRestaurantes"
-          v-model="selectedRestaurante"
+          v-model="form.selectedRestaurante"
+          
           @complete="search"
         >
           <template #footer>
@@ -212,17 +235,19 @@ const initialValues = ref({
             </div>
           </template>
         </AutoComplete>
+        <Message v-if="$form.restaurante?.invalid" severity="error" size="small" variant="simple">{{ $form.restaurante.error.message }}</Message>
+
         <Dialog
           v-model:visible="addRestaurantModal"
           header="Edit Profile"
           :style="{ width: '25rem' }"
         >
           <div class="flex items-center gap-4 mb-4">
-            <label for="username" class="font-semibold w-24"
+            <label for="restaurante" class="font-semibold w-24"
               >Nome do restaurante</label
             >
             <InputText
-              id="nome"
+              id="restaurante"
               class="flex-auto"
               type="texts"
               v-model="selectedRestaurante"
@@ -248,23 +273,23 @@ const initialValues = ref({
       </div>
       <div class="flex flex-col gap-8">
         <FloatLabel variant="over">
-          <InputText name="prato" type="text" v-model="form.prato"/>
-          <label for="over_label">Nome do prato</label>
+          <InputText id="prato" name="prato" type="text" v-model="form.prato"/>
+          <label for="prato">Nome do prato</label>
         </FloatLabel>
         <FloatLabel>    
             <label for="over_label">Preço</label>
           <InputNumber name="preco" type="number" prefix="R$" v-model.number="form.preco"/>
         </FloatLabel>
         <FloatLabel variant="over">
-          <InputText name="carne" type="number" :min=0 :max=5 :step=1 v-model="form.carne"/>
-          <label for="over_label">Nota carne e crosta 0 a 5</label>
+          <InputNumber name="carne" type="number" :min=0 :max=5 :step=1 v-model.number="form.carne"/>
+          <label for="carne">Nota carne e crosta 0 a 5</label>
           <Textarea name="obs_carne" rows="5" cols="30" style="resize: none" v-model="form.obs_carne"/>
         </FloatLabel>
         <FloatLabel variant="over">
           <InputNumber name="molho" type="number" :min="0"
       :max="5"
-      :step="1" v-model="form.molho"/>
-          <label for="over_label">Nota molho 0 a 5</label>
+      :step="1" v-model.number="form.molho"/>
+          <label for="molho">Nota molho 0 a 5</label>
           <Textarea name="obs_molho" rows="5" cols="30" style="resize: none" v-model="form.obs_molho"/>
         </FloatLabel>
         <FloatLabel variant="over">
@@ -275,51 +300,39 @@ const initialValues = ref({
       :step="1"
       v-model.number="form.acompanhamentos"
                       />
-          <label for="over_label">Nota acompanhamentos 0 a 5</label>
+          <label for="acompanhamentos">Nota acompanhamentos 0 a 5</label>
           <Textarea name="obs_acompanhamentos" rows="5" cols="30" style="resize: none" v-model="form.obs_acompanhamentos"/>
         </FloatLabel>
         <FloatLabel variant="over">
           <InputNumber
-            name="restaurante"
+            name="nota_restaurante"
             type="number" :min=0
       :max=5
       :step=1
       v-model="form.restaurante"
                       />
-                      <label for="over_label">Nota restaurante 0 a 5</label>
+                      <label for="nota_restaurante">Nota restaurante 0 a 5</label>
                       <Textarea name="obs_restaurante" rows="5" cols="30" style="resize: none" v-model="form.obs_restaurante"/>
           
         </FloatLabel variant="over">
-        <FloatLabel variant="over">
-          <InputNumber
-            name="particular"
-            type="number" :min="0"
-      :max="5"
-      :step="1"
-                      />
-                      <Textarea name="obs_particular" rows="5" cols="30" style="resize: none" v-model="form.obs_particular" />
-          <label for="over_label">Nota particular 0 a 5</label>
-        </FloatLabel>
       </div>
-
-      <!-- <div class="felx flex-col gap-1">
-        <Textarea name="obs" rows="5" cols="30" style="resize: none" />
-      </div> -->
 
       <div class="flex flex-col gap-1">
         <FileUpload
-          name="demo[]"
-          url="/api/upload"
-          @upload="onAdvancedUpload($event)"
+          name="files"
+          ref="fileupload"
+          @upload="upload2($event)"
+          mode="basic"
           :multiple="true"
           accept="image/*"
-          :maxFileSize="1000000"
+          :maxFileSize="6000000"
           v-model="files"
         >
-        <template #empty>
-            <span>Drag and drop files to here to upload.</span>
-        </template>
     </FileUpload>
+    <Button label="Upload" @click="upload2(e)" severity="secondary" />
+    <span class="test">
+        urls: {{ form.files }}
+    </span>
 </div>
 <span class="test">
     {{ comments }}
