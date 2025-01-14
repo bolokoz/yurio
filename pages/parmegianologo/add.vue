@@ -96,46 +96,6 @@ const addRestaurant = async () => {
   addRestaurantModal.value = false;
 };
 
-// const selectedTemplate = ref(null);
-// const templates = ref([
-//   { name: "template 1", code: "1" },
-//   { name: "template 2", code: "2" },
-//   { name: "template 3", code: "3" },
-// ]);
-
-// function onSelectedTemplate() {
-//   console.log(selectedTemplate.value);
-// }
-
-const onUpload = () => toast.add({ severity: "info", summary: "File Uploaded", life: 3000 });
-
-async function upload2(e) {
-    const file = e.files[0]
-    const filename = `file_${e}_${e.name}`;
-    toast.add({ severity: 'info', summary: `uploading ${filename}`, life: 3000 });
-        await client.storage.from('parmegianas').upload(filename, file, {
-            contentType: 'image/**',
-        })
-}
-
-const files = ref<File[]>([])
-function uploadFiles() {
-    files.value.forEach(async (element: File, index: number) => {
-        const filename = `file_${index}_${element.name}`;
-        toast.add({ severity: 'info', summary: `uploading ${filename}`, life: 3000 });
-        await client.storage.from('parmegianas').upload(filename, element, {
-            contentType: 'image/**',
-        }).then(res => {
-            toast.add({ severity: 'success', summary: `File ${filename} uploaded`, life: 3000 });
-            if (res?.data?.fullPath) {
-                form.files.push(res.data.fullPath);
-            }
-        }).catch(err => {
-            toast.add({ severity: 'info', summary: `${err}`, life: 3000 });
-    })
-    })
-}
-
 const comments = computed(() => {
     let summary = `
     Review de Parmegiana
@@ -200,6 +160,58 @@ const onFormSubmit = (e) => {
     }
 };
 
+// Reactive State
+const files = ref([]); // Stores selected files
+const previews = ref([]); // Stores preview URLs
+const isUploading = ref(false); // Indicates upload status
+const statusMessage = ref(''); // Stores status messages
+
+// Handle File Selection
+const handleFiles = (event) => {
+  files.value = Array.from(event.target.files); // Store selected files
+  previews.value = files.value.map((file) => URL.createObjectURL(file)); // Generate previews
+};
+
+// Upload Files
+const uploadFiles = async () => {
+  if (!files.value.length) {
+    statusMessage.value = 'Please select files first.';
+    return;
+  }
+
+  isUploading.value = true;
+  statusMessage.value = '';
+
+  try {
+    const uploadPromises = files.value.map((file) => uploadToSupabase(file));
+    const results = await Promise.all(uploadPromises);
+    statusMessage.value = `Successfully uploaded ${results.length} files.`;
+    toast.add({ severity: 'success', summary: 'Uploaded', detail: JSON.stringify(results), life: 3000 });
+  } catch (error) {
+    statusMessage.value = 'An error occurred during upload.';
+    toast.add({ severity: 'error', summary: 'Error', detail: error, life: 3000 });
+    console.error(error);
+  } finally {
+    isUploading.value = false;
+  }
+};
+
+// Upload to Supabase
+const uploadToSupabase = async (file) => {
+  const filePath = `${file.name}`; // Define file path in the bucket
+  const { data, error } = await client.storage
+    .from('parmegianas') // Replace with your bucket name
+    .upload(filePath, file);
+
+  if (error) {
+    throw new Error(`Failed to upload ${file.name}: ${error.message}`);
+  }
+
+  form.files.push(data.fullPath);
+
+  return data;
+};
+
 </script>
 
 <template>
@@ -208,9 +220,9 @@ const onFormSubmit = (e) => {
       v-slot="$form"
       @submit="onFormSubmit"
       :initialValues="initialValues"
-      class="flex justify-center flex-col gap-4 w-full md:w-56"
+      class="flex justify-center flex-col gap-2 w-full md:w-64"
     >
-      <div class="flex flex-col gap-4 mb-4">
+      <div class="flex flex-col mb-4">
         <AutoComplete
           name="restaurante"
           optionLabel="nome"
@@ -316,20 +328,40 @@ const onFormSubmit = (e) => {
           
         </FloatLabel variant="over">
       </div>
+      <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-lg font-bold mb-4">Upload Multiple Images</h2>
 
-      <div class="flex flex-col gap-1">
-        <FileUpload
-          name="files"
-          ref="fileupload"
-          @upload="upload2($event)"
-          mode="basic"
-          :multiple="true"
-          accept="image/*"
-          :maxFileSize="6000000"
-          v-model="files"
-        >
-    </FileUpload>
-    <Button label="Upload" @click="upload2(e)" severity="secondary" />
+    <!-- File Input -->
+    <input
+      type="file"
+      multiple
+      accept="image/*"
+      @change="handleFiles"
+      class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+    />
+
+    <!-- Preview -->
+    <div v-if="previews.length" class="mt-6 grid grid-cols-3 gap-4">
+      <div v-for="(preview, index) in previews" :key="index">
+        <img :src="preview" alt="Preview" class="w-full h-32 object-cover rounded-lg shadow-md" />
+      </div>
+    </div>
+
+    <!-- Upload Button -->
+    <button
+      @click="uploadFiles"
+      :disabled="isUploading || !files.length"
+      class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 disabled:bg-gray-400"
+    >
+      {{ isUploading ? "Uploading..." : "Upload Images" }}
+    </button>
+
+    <!-- Status -->
+    <p v-if="statusMessage" class="mt-4 text-sm text-gray-600">{{ statusMessage }}</p>
+  </div>
+ 
+
+<div>
     <span class="test">
         urls: {{ form.files }}
     </span>
