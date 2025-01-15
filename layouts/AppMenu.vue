@@ -16,6 +16,7 @@ const model = ref([
     {
         label: 'Mini apps',
         items: [
+        { label: 'Parmegianologo', icon: 'pi pi-fw pi-food', to: '/parmegianologo' },
         {
                 label: 'Engenharia',
                 icon: 'pi pi-fw pi-user',
@@ -42,7 +43,7 @@ const model = ref([
     {
         label: 'Projects',
         items: [
-            { label: 'Parmegianologo', icon: 'pi pi-fw pi-food', to: '/parmegianologo' },
+            
 
             { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
             { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
