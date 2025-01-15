@@ -2,7 +2,7 @@
 import FloatingConfigurator from '~~/components/FloatingConfigurator.vue';
 
 definePageMeta({
-  layout: 'empty'
+  layout: false
 });
 
 </script>

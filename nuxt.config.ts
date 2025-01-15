@@ -18,6 +18,8 @@ export default defineNuxtConfig({
         redirectOptions: {
             login: '/auth/login',
             callback: '/auth/confirm',
+            include: ["/parmegianologo/add"],
+            exclude: ['/**']
           }
       },
     primevue: {
@@ -31,7 +33,7 @@ export default defineNuxtConfig({
             }
         }
     },
-    plugins: ['~/plugins/primevue.js'],
+    // plugins: ['~/plugins/primevue.js'],
     app: {
         head: {
             charset: 'utf-8',

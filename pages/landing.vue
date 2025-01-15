@@ -1,7 +1,7 @@
 <script setup>
 
 definePageMeta({
-  layout: 'empty'
+  layout: false
 });
 function smoothScroll(id) {
     document.body.click();

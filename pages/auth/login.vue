@@ -34,7 +34,7 @@ const signInWithEmail = async () => {
   }
 
 definePageMeta({
-  layout: 'empty'
+  layout: false
 });
 
 </script>

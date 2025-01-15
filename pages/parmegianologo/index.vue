@@ -27,7 +27,7 @@ const goToPage = async (data) => {
     <div>
         <div v-if="user">
             <Button label="Adicionar">
-                <NuxtLink to="/parmegianologo/add">
+                <NuxtLink to="/admin/parmegianologo/add">
 
                     <i class="pi pi-plus"></i>
                     <span class="ml-2">Adicionar</span>
@@ -45,13 +45,12 @@ const goToPage = async (data) => {
             <template #header>
                 <div class="flex flex-wrap items-center justify-between gap-2">
                     <span class="text-xl font-bold">Reviews Parmegianas</span>
-                    <Button icon="pi pi-refresh" rounded raised />
                 </div>
             </template>
             <Column field="restaurantes.nome" header="Name" sortable></Column>
             <Column header="Actions">
         <template #body="slotProps">
-            <Button icon="pi pi-pencil" outlined rounded class="mr-2" @click="goToPage(slotProps.data)" />
+            <Button icon="pi pi-window-maximize" outlined rounded class="mr-2" @click="goToPage(slotProps.data)" />
         </template>
     </Column>
             <Column field="date" header="Data" sortable>
