@@ -1,0 +1,164 @@
+{
+  "editorPosition": "right",
+  "attachShortcutToGlobalWindow": false,
+  "globalNamespace": "MF",
+  "formDefinitions": [
+    {
+      "title": "Adicionar Parmegiana_v1",
+      "name": "parmegianologo_v1",
+      "fields": [
+        {
+          "name": "title",
+          "label": "restaurante",
+          "description": "restaurante",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "date",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "date",
+            "hidden": false
+          }
+        },
+        {
+          "name": "category",
+          "label": "",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": true
+          }
+        },
+        {
+          "name": "acompanhamentos",
+          "label": "",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [],
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rating",
+          "label": "",
+          "description": "rating pessoal",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "name": "rating_tecnica",
+          "label": "",
+          "description": "rating tecnica",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "name": "rating_carne",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "name": "rating_molho",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "name": "rating_crosta",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "name": "rating_acompanhamentos",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "name": "rating_restaurante",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "name": "rating_maisvalia",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "slider",
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "name": "preco",
+          "label": "",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "porcao",
+          "label": "",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    }
+  ]
+}

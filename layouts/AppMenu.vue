@@ -7,25 +7,44 @@ const model = ref([
     {
         label: 'Home',
         items: [
-            { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }
+            { label: 'Notes', icon: 'pi pi-fw pi-book', to: '/notes' },
+            { label: 'Parmegianologo', icon: 'pi pi-fw pi-heart-fill', to: '/parmegianologo' },
+            { label: 'Demo Dashboard', icon: 'pi pi-fw pi-home', to: '/' },
 
         ]
     },
     {
-        label: 'Projects',
+        label: 'Mini apps',
         items: [
-            { label: 'Parmegianologo', icon: 'pi pi-fw pi-food', to: '/parmegianologo' },
-            {
+        { label: 'Parmegianologo', icon: 'pi pi-fw pi-food', to: '/parmegianologo' },
+        {
                 label: 'Engenharia',
                 icon: 'pi pi-fw pi-user',
                 items: [
                     {
                         label: 'Calculadora',
                         icon: 'pi pi-fw pi-sign-in',
-                        to: '/notes/eng/calculadora'
+                        to: '/eng/calculadora'
+                    },
+                    {
+                        label: 'teste',
+                        icon: 'pi pi-fw pi-sign-in',
+                        to: '/eng/test'
+                    },
+                    {
+                        label: 'Calculadora',
+                        icon: 'pi pi-fw pi-sign-in',
+                        to: '/eng/estimativa_koeroga'
                     }
                 ]
             },
+        ]
+    },
+    {
+        label: 'Projects',
+        items: [
+            
+
             { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
             { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
             { label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/uikit/button', class: 'rotated-icon' },
