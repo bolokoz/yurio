@@ -460,9 +460,9 @@ const uploadToSupabase = async (file) => {
       </div>
 
       <div>
-        <span class="test"> urls: {{ form.files }} </span>
+        <span class="white-space-pre-line"> urls: {{ form.files }} </span>
       </div>
-      <span class="test">
+      <span class="white-space-pre-line">
         {{ comments }}
       </span>
 
@@ -473,7 +473,4 @@ const uploadToSupabase = async (file) => {
 </template>
 
 <style>
-.test {
-  white-space: pre-line; /* Treat \n as a line break */
-}
 </style>
