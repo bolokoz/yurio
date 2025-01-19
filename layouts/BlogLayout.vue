@@ -58,7 +58,6 @@ function isOutsideClicked(event) {
     <div class="layout-wrapper" :class="containerClass">
         <app-topbar></app-topbar>
         <app-sidebar></app-sidebar>
-        <app-sidebar-right></app-sidebar-right>
         <div class="layout-main-container">
             <div class="layout-main">
                 <nuxt-page></nuxt-page>

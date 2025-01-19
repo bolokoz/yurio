@@ -11,6 +11,7 @@ const outsideClickListener = ref(null);
 
 watch(isSidebarActive, (newVal) => {
     if (newVal) {
+        console.log('sidebar active');
         bindOutsideClickListener();
     } else {
         unbindOutsideClickListener();
@@ -31,6 +32,7 @@ function bindOutsideClickListener() {
     if (!outsideClickListener.value) {
         outsideClickListener.value = (event) => {
             if (isOutsideClicked(event)) {
+                console.log('outside click, reseting');
                 resetMenu();
             }
         };
@@ -42,14 +44,31 @@ function unbindOutsideClickListener() {
     if (outsideClickListener.value) {
         document.removeEventListener('click', outsideClickListener);
         outsideClickListener.value = null;
+        console.log('unbind outside click');
     }
 }
 
 function isOutsideClicked(event) {
     const sidebarEl = document.querySelector('.layouts-sidebar');
     const topbarEl = document.querySelector('.layouts-menu-button');
+    const maskEl = document.querySelector('.layout-mask');
 
-    return !(sidebarEl.isSameNode(event.target) || sidebarEl.contains(event.target) || topbarEl.isSameNode(event.target) || topbarEl.contains(event.target));
+    console.log('isOutsideCliked?', event.target);
+    
+    
+    if(maskEl && (maskEl.isSameNode(event.target) || maskEl.contains(event.target))) {
+        console.log('isOutsideClicked? mask');
+        return true;
+    }
+    if(!sidebarEl){
+        console.log('isOutsideClicked? no sidebar');
+        return
+    }; 
+
+    if( !(sidebarEl.isSameNode(event.target) || sidebarEl.contains(event.target) || topbarEl.isSameNode(event.target) || topbarEl.contains(event.target)) ) {
+        console.log('isOutsideClicked? yes');
+        return true;
+    }
 }
 </script>
 
