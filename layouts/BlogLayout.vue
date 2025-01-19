@@ -2,7 +2,6 @@
 import { computed, ref, watch } from 'vue';
 import AppFooter from './AppFooter.vue';
 import AppSidebar from './AppSidebar.vue';
-import AppSidebarRight from './AppSidebarRight.vue';
 import AppTopbar from './AppTopbar.vue';
 import {useLayout} from "~~/layouts/composables/layout.js";
 
