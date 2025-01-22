@@ -16,7 +16,7 @@ const { data: all } = await useAsyncData('all', () => {
 
 //elimina artigos em subfolders
 const filtered = computed (() => {
-  const regex = new RegExp(`^${route.path}[^/]+$`);
+  const regex = new RegExp(`^${route.path}\/[^/]+$`);
   return all.value ? all.value.filter(item => regex.test(item.path)) : []
 })
 
@@ -27,10 +27,11 @@ const { data: surround } = await useAsyncData('documents-list', () => {
 </script>
 
 <template>
-
   <div v-if="content">
-    <YurioTitle></YurioTitle>
-
+    <YurioTitle 
+      :title="content.title"
+      :subtitle="content.description"
+    ></YurioTitle>
 
     <ContentRenderer v-if="content" :value="content">
       
