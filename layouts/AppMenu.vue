@@ -8,7 +8,7 @@ const { data: contentNavigation } = await useAsyncData("navigation", () => {
   return queryCollectionNavigation("content");
 });
 const menuItens = computed(() => {
-  console.log("value", contentNavigation.value[0]);
+//   console.log("value", contentNavigation.value[0]);
   // Ensure data is available and has the expected structure
   if (
     !contentNavigation.value[0] ||
@@ -37,7 +37,7 @@ const model = ref([
   {
     label: "Home",
     items: [
-      { label: "Notes", icon: "pi pi-fw pi-book", to: "/notes" },
+      { label: "Notes", icon: "pi pi-fw pi-book", to: "/content" },
       {
         label: "Parmegianologo",
         icon: "pi pi-fw pi-heart-fill",
@@ -123,7 +123,7 @@ const model = ref([
       {
         label: "Notes",
         icon: "pi pi-fw pi-globe",
-        to: "/notes/eng/test",
+        to: "/content/eng/test",
       },
       {
         label: "Auth",

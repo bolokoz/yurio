@@ -8,7 +8,7 @@ export default defineContentConfig({
       type: 'page',
       source: {
         include: '**/*.md',
-        prefix: '/notes/',
+        prefix: '/content/',
       },
     })
   }

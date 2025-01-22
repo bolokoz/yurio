@@ -1,3 +1,0 @@
----
-title: Programação de software
----
