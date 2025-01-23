@@ -11,13 +11,14 @@
             "id": "16658ecb28e2e70a",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "content/projects/koeroga/Vedações.md",
-                "staged": false
+                "file": "projects/koeroga/Plano de negócio.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (Vedações)"
+              "icon": "lucide-file",
+              "title": "Plano de negócio"
             }
           }
         ],
@@ -138,9 +139,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "projects/koeroga/Plano de negócio.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Plano de negócio"
             }
           },
           {
@@ -286,8 +289,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "16658ecb28e2e70a",
+  "active": "f22caa2357b1cd3a",
   "lastOpenFiles": [
+    "projects/checklists/Avaliar terrenos.md",
+    "projects/koeroga/Plano de negócio.md",
+    "projects/checklists",
+    "projects/koeroga/index.md",
+    "templates/projetos.md",
     "projects/Imoveis CG.md",
     "projects/koeroga/Vedações.md",
     "projects/koeroga/Controle de umidade.md",
@@ -311,10 +319,6 @@
     "templates/parme_v1.md",
     "projects/purahei.md",
     "projects/furushow.md",
-    "projects/edificio_mariano.md",
-    "eng/Lubrificantes - contaminações.md",
-    "eng/Forças intermoleculáres.md",
-    "eng/ZDDP - aditivo de lubrificante.md",
     "templates",
     "filosofia",
     "Ideias",
