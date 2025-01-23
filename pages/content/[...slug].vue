@@ -51,7 +51,7 @@ const { data: surround } = await useAsyncData('documents-list', () => {
   </ContentRenderer>
 </div>
   <!-- if multiple found -> its a folder -->
-  <div v-if="filtered">
+  <div v-if="filtered.length > 1">
     <YurioTitle :title="route.path.split('/')[2]" subtitle="Notas" :path="route.fullPath"></YurioTitle>
     <Menu :model="filtered">
     <template #item="{ item, props }">
@@ -64,7 +64,7 @@ const { data: surround } = await useAsyncData('documents-list', () => {
     </template>
 </Menu>
   </div>
-  <div v-else>
+  <div v-else-if="!content">
     <div class="min-h-screen flex items-center justify-center bg-gray-200">
       Not found
     </div>

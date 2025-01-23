@@ -20,7 +20,6 @@
     "primeicons": "^7.0.0",
     "primevue": "^4.2.2",
     "tailwindcss-primeui": "^0.3.4",
-    "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
