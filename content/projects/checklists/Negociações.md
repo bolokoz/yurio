@@ -1,3 +1,7 @@
+---
+modified: 2025-01-23T22:26:15-03:00
+created: 2025-01-23T21:52:36-03:00
+---
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1737679964/furushow7/image_drkewv.png)
 
 - BATNA - best alternativa option. Quanto mais alternativas e outras opiniões, mais confortável você vai estar de sair da negociação
