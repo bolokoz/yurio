@@ -1,6 +1,9 @@
 ---
-modified: 2025-01-24T00:08:24-03:00
+modified: 2025-01-24T00:15:17-03:00
 created: 2025-01-23T22:50:02-03:00
+category:
+  - investimentos
+published: true
 ---
 ## Por que a taxa de juros é tão alta
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blogs/Taxa de juros no Brasil.md",
+                "file": "eng/Ventilação de esgoto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Taxa de juros no Brasil"
+              "title": "Ventilação de esgoto"
             }
           }
         ],
@@ -140,10 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blogs/Taxa de juros no Brasil.md"
+                "file": "dev/NotionBlog.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Taxa de juros no Brasil"
+              "title": "Outline of NotionBlog"
             }
           },
           {
@@ -289,10 +289,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f22caa2357b1cd3a",
+  "active": "16658ecb28e2e70a",
   "lastOpenFiles": [
-    "projects/checklists/Vida.md",
+    "dev/NotionBlog.md",
+    "eng/Ventilação de esgoto.md",
+    "dev/Quartz.md",
     "blogs/Taxa de juros no Brasil.md",
+    "dev/202408_todo.md",
+    "dev/Configurar Port Forward.md",
+    "dev/2.md",
+    "dev/1.md",
+    "blogs/4. fetch-content-data-render-pages.md",
+    "blogs/1. connect-namecheap-to-vercel.md",
+    "blogs/2. fix-tailwindcss-intellisense-in-nuxt3.md",
+    "blogs/3. create-namespace-subdomain-connect-to-vercel.md",
+    "blogs/5. vue3-awesome-library.md",
+    "blogs/6. how-to-fix-vuex-type-issue.md",
+    "projects/checklists/Vida.md",
     "projects/checklists/Negociações.md",
     "projects/koeroga/Plano de negócio.md",
     "projects/checklists/Avaliar terrenos.md",
@@ -305,20 +318,7 @@
     "projects/koeroga/Isolamento térmico.md",
     "parmegianologo/testandomodal.md",
     "projects/koeroga/Plantas.md",
-    "filosofia/Civilização nas Montanhas.md",
-    "blogs/1. connect-namecheap-to-vercel.md",
-    "filosofia/Génesis e Marte.md",
-    "filosofia/Helvetica e outras fontes.md",
-    "projects/koeroga.md",
-    "dev/Retool.md",
-    "dev/1.md",
     "projects/koeroga",
-    "linguagens/Pojopy.md",
-    "linguagens/Ajavy.md",
-    "linguagens/aikoteve_nderehe.md",
-    "blogs/6. how-to-fix-vuex-type-issue.md",
-    "blogs/3. create-namespace-subdomain-connect-to-vercel.md",
-    "templates/parmegianologo_v1.md",
     "templates",
     "filosofia",
     "Ideias",
