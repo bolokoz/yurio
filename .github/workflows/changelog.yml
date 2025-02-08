@@ -23,7 +23,6 @@ jobs:
           else
             echo "::set-output name=files::$MODIFIED_FILES"
           fi
-          echo "::set-output name=files::$MODIFIED_FILES"
 
       - name: Get Commit Message
         id: get_commit_message
