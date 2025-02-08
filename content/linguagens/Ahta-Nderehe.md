@@ -66,7 +66,7 @@ Che consuelo che symi, aha jeýta hendápe
 
 Che pehêngue oîhápe tambohasa vy'a'ỹ
 
->
+> Donde estoy voy causar tristeza
 
 Hetaitéma jepy'apy asufrí nde rayhupápe
 
@@ -79,102 +79,3 @@ A-resolvéma ipahápe: Aháta nderehe'ỹ
 Aháta nderehe'ỹ
 
 > Voy sin ti
-<<<<<<< HEAD
-=======
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/1f623b1eee9c6959a7201721fba3b2ce96c1b7c9)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/52d52f57c0f20313b959ed7a9b99d250cf133557)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/2b6d7ad269e2d0f78d71132d199cda5c679eed8e)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/0018c743a625fd1d9d8a2a1fd8b5eaa4feeeab7b)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/1abbefefca71efd3d62ea17d2c28ac4de8aa418b)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/f8236184cff09a806fe9c4366d24322490980a65)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/8f0ba2618108d00dae56a10943c1909dccbd4b33)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/1de5bb230dc47ca81f3fc9dece686ab133c61d01)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/0d2bc61ac5a56f30a41bffcdfe2e2b2a10cdc58f)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/0c3eb8a2bf94de631f003b928075756040af4ac9)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/e5fb15adf32cd79de8c2c42de31f8b926dc84d1e)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/956460d3af7f1733f090cd5f70176ad3b357b985)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/eaffe017a0ac6c291e000b118d0d8c5c7ed34d12)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/5698fa9ff55b2793449f85a8b740d6b0ede1bbce)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/56c804d1a5e45fe89e68c5759ea1e7da64e7d5ab)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/6b88089c77998f7ea03f3226b1cba7a41350f47d)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/170fdb1a2c28ef2e48e804478298cdafcc70afca)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/54b0f3edec3bfea7df8688b4e79b9a201163ad5f)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/45c8f83c3358de18ff79145abd5091624a03576a)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/b5c5548844ff2c484196bc5c524e65cd2c77b871)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/fea3902bd6b7b40ec6f5f795ad57cfd5b8c51f67)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/abed1164cc117c3354eea219e2e498002d86b0f6)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/21e5eaf7e4c8adc3848ab44a8d3c482c4c84e1c0)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/61393f6434d0555b131d4d92e6597d8942d02257)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/c7d59b4fab0cde0d159ebda8edc9b1c856e94f41)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/fe1a01b049dda7920cb4eccdf43015b922f11d11)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/2738c2b6de461a870f0f7c5ec3501b3854a2a5a2)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/fb6d588a13351b95f80ecbdd98f4c7bbe5955606)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/92e6c814030aaa0de309e92b4e72f008c4c087aa)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/d0f05aceb8463a5f65b2ec7cbc4b9cfd84f647d8)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/476745d07bce0d1ea9161f7a1235c136037d548a)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/6a88a2bab8a0847e29efbb770e73ebbf3c2e7d7e)
->>>>>>> 933bac173eaf2cd63bce6a46203ed149de84fbf7
