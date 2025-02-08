@@ -79,18 +79,3 @@ A-resolvéma ipahápe: Aháta nderehe'ỹ
 Aháta nderehe'ỹ
 
 > Voy sin ti
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/1f623b1eee9c6959a7201721fba3b2ce96c1b7c9)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/52d52f57c0f20313b959ed7a9b99d250cf133557)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/2b6d7ad269e2d0f78d71132d199cda5c679eed8e)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/0018c743a625fd1d9d8a2a1fd8b5eaa4feeeab7b)
-
-## Commit Diff
-[View commit diff on GitHub](https://github.com/bolokoz/yurio/commit/1abbefefca71efd3d62ea17d2c28ac4de8aa418b)

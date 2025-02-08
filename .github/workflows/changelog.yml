@@ -1,55 +1,67 @@
-name: Append Commit Diff Link to Markdown Files
+name: Append Changelog Entry to Markdown Files
 
+# The workflow is triggered on push but only if the commit message does not contain "[skip ci]"
 on:
   push:
     branches:
       - changelog  # Adjust as needed
 
 jobs:
-  append-commit-diff:
+  append-changelog:
+    # This condition prevents the job from running if the commit message includes "[skip ci]"
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository using the PAT for further push operations.
+      # Step 1: Checkout the repository with full history.
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PAT_TOKEN }}  # Use your PAT instead of the default GITHUB_TOKEN
-          fetch-depth: 0  # Ensures full commit history for diff operations
+          fetch-depth: 0
 
-      # Step 2: Append commit diff link to each modified Markdown file
-      - name: Append commit diff link to modified Markdown files
+      # Step 2: Append a changelog entry to modified Markdown files
+      - name: Append changelog entry to modified Markdown files
         run: |
+          # Use the GitHub provided commit SHA
           COMMIT_SHA="${GITHUB_SHA}"
           echo "Processing commit: ${COMMIT_SHA}"
           
-          # List files modified in this commit that end with .md
+          # List Markdown files modified in this commit.
           MD_FILES=$(git diff-tree --no-commit-id --name-only -r ${COMMIT_SHA} | grep -E '\.md$' || true)
           echo "Modified Markdown files: ${MD_FILES}"
           
-          # Exit if no Markdown files were modified.
           if [ -z "$MD_FILES" ]; then
             echo "No Markdown files modified. Exiting."
             exit 0
           fi
           
-          # Construct the commit diff link
+          # Construct the commit diff link.
           COMMIT_DIFF_LINK="https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}"
-          echo "Commit diff link: ${COMMIT_DIFF_LINK}"
           
-          # Append the commit diff link to each Markdown file.
+          # Retrieve commit message (subject) and commit date in dd/mm/yyyy format.
+          COMMIT_MESSAGE=$(git log -1 --pretty=format:"%s" ${COMMIT_SHA})
+          COMMIT_DATE=$(git log -1 --pretty=format:"%ad" --date=format:"%d/%m/%Y" ${COMMIT_SHA})
+          echo "Commit message: ${COMMIT_MESSAGE}"
+          echo "Commit date: ${COMMIT_DATE}"
+          
+          # For each Markdown file, append or create a changelog.
           for file in $MD_FILES; do
-            echo "" >> "$file"
-            echo "## Commit Diff" >> "$file"
-            echo "[View commit diff on GitHub](${COMMIT_DIFF_LINK})" >> "$file"
-            echo "Appended commit diff link to $file"
+            if grep -q "^## Changelog:" "$file"; then
+              echo " - ${COMMIT_DATE}: [${COMMIT_MESSAGE}](${COMMIT_DIFF_LINK})" >> "$file"
+            else
+              echo "" >> "$file"
+              echo "## Changelog:" >> "$file"
+              echo " - ${COMMIT_DATE}: [${COMMIT_MESSAGE}](${COMMIT_DIFF_LINK})" >> "$file"
+            fi
+            echo "Updated changelog in $file"
           done
 
-      # Step 3: Commit and push changes using the PAT
+      # Step 3: Commit and push the changes.
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Append commit diff link to modified Markdown files" || echo "No changes to commit."
+          # Note: The commit message now includes [skip ci] so that this commit does not trigger the workflow.
+          git commit -m "Append changelog entry for commit ${GITHUB_SHA} [skip ci]" || echo "No changes to commit."
           git push origin HEAD:${{ github.ref }}
