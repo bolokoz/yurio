@@ -52,7 +52,7 @@ Javy'aitemihague sapy'ánte rehechárõ
 
 Ñanandýpe oñeñuãrõ ha oiko chugui tapere
 
->
+> En el desierto se oculta y de él surge una senda
 
 Upérõkena ere siquiera nde py'apýpe
 
