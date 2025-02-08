@@ -4,7 +4,7 @@ name: Append Changelog Entry to Markdown Files
 on:
   push:
     branches:
-      - changelog  # Adjust as needed
+      - main  # Adjust as needed
 
 jobs:
   append-changelog:
