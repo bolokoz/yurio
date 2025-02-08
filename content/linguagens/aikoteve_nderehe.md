@@ -19,13 +19,15 @@ _eu preciso de voce_
 
 mitare mi vida
 
- nderehe eiko querida
+nderehe eiko querida
 
 ase mbareei nendive
 
 en pensamiento paite
+_em todo pensamento_
 
 oike akãme idea
+_vive uma idea na cabeca_
 
 aipota resolvema
 

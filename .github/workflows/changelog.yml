@@ -47,9 +47,7 @@ jobs:
             echo "Appended commit message to $file"
           done
 
-      Step 3 (Optional): Commit and push the changes back to the repository.
-      Uncomment the following step if you want to automatically commit the changes.
-      
+      # Step 3 (Optional): Commit and push the changes back to the repository.
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
