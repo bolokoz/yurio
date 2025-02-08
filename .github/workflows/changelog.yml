@@ -17,6 +17,12 @@ jobs:
         run: |
           # Get a list of modified .md files in the latest commit
           MODIFIED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '\.md$')
+          if [ -z "$MODIFIED_FILES" ]; then
+            echo "No modified .md files found."
+            exit 0
+          else
+            echo "::set-output name=files::$MODIFIED_FILES"
+          fi
           echo "::set-output name=files::$MODIFIED_FILES"
 
       - name: Get Commit Message
