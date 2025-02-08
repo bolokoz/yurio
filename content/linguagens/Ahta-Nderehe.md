@@ -28,7 +28,7 @@ Oikóvamante oikóta ha asêtante aha rei
 
 Tou guyrami saite tojaitypo pe techo kuápe
 
-> Comeu meu passarainho ?
+> Comeu passarainho ?
 
 Jaikohaguéicha ko'ápe tojoavi'û oñondive
 

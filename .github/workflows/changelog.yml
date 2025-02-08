@@ -1,30 +1,29 @@
-name: Append Commit Message to Markdown Files
+name: Append Commit Diff Link to Markdown Files
 
 on:
   push:
     branches:
-      - changelog  # Change to your target branch if needed
+      - changelog  # Adjust as needed
 
 jobs:
-  append-commit-message:
+  append-commit-diff:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository
+      # Step 1: Check out the repository using the PAT for further push operations.
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Ensure full history so that git log works correctly
+          token: ${{ secrets.PAT_TOKEN }}  # Use your PAT instead of the default GITHUB_TOKEN
+          fetch-depth: 0  # Ensures full commit history for diff operations
 
-      # Step 2: Append commit message to each modified .md file
-      - name: Append commit message to modified Markdown files
+      # Step 2: Append commit diff link to each modified Markdown file
+      - name: Append commit diff link to modified Markdown files
         run: |
-          # Get the current commit SHA from the environment variable
           COMMIT_SHA="${GITHUB_SHA}"
           echo "Processing commit: ${COMMIT_SHA}"
           
-          # List files modified in this commit and filter for Markdown files.
-          # Note: In a push with multiple commits you may need to adjust this.
+          # List files modified in this commit that end with .md
           MD_FILES=$(git diff-tree --no-commit-id --name-only -r ${COMMIT_SHA} | grep -E '\.md$' || true)
           echo "Modified Markdown files: ${MD_FILES}"
           
@@ -34,25 +33,23 @@ jobs:
             exit 0
           fi
           
-          # Retrieve the commit message
-          COMMIT_MSG=$(git log -1 --pretty=%B ${COMMIT_SHA})
-          echo "Commit message:"
-          echo "$COMMIT_MSG"
+          # Construct the commit diff link
+          COMMIT_DIFF_LINK="https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}"
+          echo "Commit diff link: ${COMMIT_DIFF_LINK}"
           
-          # For each Markdown file, append a header and the commit message at the end.
+          # Append the commit diff link to each Markdown file.
           for file in $MD_FILES; do
             echo "" >> "$file"
-            echo "## Commit Message" >> "$file"
-            echo "$COMMIT_MSG" >> "$file"
-            echo "Appended commit message to $file"
+            echo "## Commit Diff" >> "$file"
+            echo "[View commit diff on GitHub](${COMMIT_DIFF_LINK})" >> "$file"
+            echo "Appended commit diff link to $file"
           done
 
-      # Step 3 (Optional): Commit and push the changes back to the repository.
+      # Step 3: Commit and push changes using the PAT
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          # Commit only if there are changes; otherwise, the commit command will fail.
-          git commit -m "Append commit message to modified Markdown files" || echo "No changes to commit."
+          git commit -m "Append commit diff link to modified Markdown files" || echo "No changes to commit."
           git push origin HEAD:${{ github.ref }}
