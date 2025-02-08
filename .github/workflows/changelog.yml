@@ -12,6 +12,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Debug Git History
+        shell: bash
+        run: |
+          git log --oneline -n 10 # Show the last 10 commit hashes
+          git rev-parse --verify ${{ github.sha }} # Try to verify the commit hash
+
       - name: Get Modified MD Files
         id: get_modified_files
         run: |
