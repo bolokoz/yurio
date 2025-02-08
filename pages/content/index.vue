@@ -1,6 +1,8 @@
 <script setup lang="ts">
-const { data } = await useAsyncData("navigation", () => {
-  return queryCollectionNavigation("content");
+const { data } = await useAsyncData("navigation", async () => {
+  const res = await queryCollectionNavigation("content");
+  console.log(res);
+  return transformData(res[0].children);
 });
 
 type TreeNode = {
@@ -9,20 +11,40 @@ type TreeNode = {
   children?: TreeNode[];
 };
 
-function renameKeyRecursive(node: TreeNode): TreeNode {
-  // Rename the title key to label
-  const { title, ...rest } = node;
-  const newNode: TreeNode = { ...rest, label: title };
 
-  // Process children recursively if they exist
-  if (newNode.children && Array.isArray(newNode.children)) {
-    newNode.children = newNode.children.map(renameKeyRecursive);
-  }
+function transformData(data) {
+    return data.map(item => {
+        const menuItem = {
+            label: item.title,
+            route: item.path
+        };
 
-  return newNode;
+        if (item.children) {
+            menuItem.items = transformData(item.children);
+            menuItem.icon = 'pi pi-folder'; // Example icon for folders
+        } else {
+            menuItem.route = item.path;
+            menuItem.icon = 'pi pi-file'; // Example icon for files
+        }
+        return menuItem;
+    });
 }
 
-const dataTree = renameKeyRecursive(data);
+function transformMenu(item) {
+  // Create the base object with label
+  const output = { label: item.title };
+
+  // Check if the item has children; if so, transform them recursively.
+  if (item.children && Array.isArray(item.children) && item.children.length > 0) {
+    output.icon = 'pi pi-folder'; // default icon for container items
+    // output.items = item.children.map(child => transformMenu(child));
+  } else {
+    // Leaf item; add the route property using the item's path.
+    output.route = item.path;
+  }
+
+  return output;
+}
 
 const route = useRoute();
 const home = ref({
@@ -45,17 +67,22 @@ const home = ref({
 
 <Divider class="py-8" />
 
-    <Tree :value="data"  class="w-full md:w-[30rem]">
-      <template #default="slotProps">
-        <NuxtLink
-          :to="slotProps.node.path" 
-          rel="noopener noreferrer"
-          class="text-surface-700 dark:text-surface-0 hover:text-primary"
-          >{{ slotProps.node.title }}</NuxtLink
-        >
-      </template>
-    </Tree>
+  <TieredMenu :model="data">
+    <template #item="{ item, props, hasSubmenu }">
+                <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+                    <a v-ripple :href="href" v-bind="props.action" @click="navigate">
+                        <span :class="item.icon" />
+                        <span class="ml-2">{{ item.label }}</span>
+                    </a>
+                </router-link>
+                <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
+                    <span :class="item.icon" />
+                    <span class="ml-2">{{ item.label }}</span>
+                    <span v-if="hasSubmenu" class="pi pi-angle-right ml-auto" />
+                </a>
+            </template>
+  </TieredMenu>
 
-    <Tree :value="dataTree" />
+    <!-- <Tree :value="dataTree" /> -->
   </div>
 </template>
