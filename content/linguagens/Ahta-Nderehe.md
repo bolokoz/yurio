@@ -60,6 +60,8 @@ Upérõkena ere siquiera nde py'apýpe
 
 Che rayhúva karia'ýpe ko'ápe ahejava'ekue
 
+> Yo deje el hombre que ame aca
+
 Che consuelo che symi, aha jeýta hendápe
 
 > Yo consuelo mi mamá, voy encontrarla otra vez
