@@ -1,63 +1,60 @@
-name: Update Changelog in MD Files
+name: Append Commit Message to Markdown Files
 
 on:
   push:
     branches:
-      - changelog # or your main branch name (e.g., master, develop)
+      - main  # Change to your target branch if needed
 
 jobs:
-  changelog:
+  append-commit-message:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
+      # Step 1: Check out the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure full history so that git log works correctly
 
-      - name: Debug Git History
-        shell: bash
+      # Step 2: Append commit message to each modified .md file
+      - name: Append commit message to modified Markdown files
         run: |
-          git log --oneline -n 10 # Show the last 10 commit hashes
-          git rev-parse --verify ${{ github.sha }} # Try to verify the commit hash
-
-      - name: Get Modified MD Files
-        id: get_modified_files
-        run: |
-          # Get a list of modified .md files in the latest commit
-          MODIFIED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '\.md$')
-          if [ -z "$MODIFIED_FILES" ]; then
-            echo "No modified .md files found."
+          # Get the current commit SHA from the environment variable
+          COMMIT_SHA="${GITHUB_SHA}"
+          echo "Processing commit: ${COMMIT_SHA}"
+          
+          # List files modified in this commit and filter for Markdown files.
+          # Note: In a push with multiple commits you may need to adjust this.
+          MD_FILES=$(git diff-tree --no-commit-id --name-only -r ${COMMIT_SHA} | grep -E '\.md$' || true)
+          echo "Modified Markdown files: ${MD_FILES}"
+          
+          # Exit if no Markdown files were modified.
+          if [ -z "$MD_FILES" ]; then
+            echo "No Markdown files modified. Exiting."
             exit 0
-          else
-            echo "::set-output name=files::$MODIFIED_FILES"
           fi
-
-      - name: Get Commit Message
-        id: get_commit_message
-        run: |
-          COMMIT_MESSAGE=$(git log -1 --pretty=format:'%s%n%n%b') # Short and full message
-          echo "::set-output name=message::$COMMIT_MESSAGE"
-
-      - name: Append Changelog to MD Files
-        if: steps.get_modified_files.outputs.files != ''
-        run: |
-          MODIFIED_FILES="${{ steps.get_modified_files.outputs.files }}"
-          COMMIT_MESSAGE="${{ steps.get_commit_message.outputs.message }}"
-
-          IFS=$'\n' read -r -d '' -a FILES <<< "$MODIFIED_FILES"
-
-          for file in "${FILES[@]}"; do
-            echo "Processing file: $file"
-            # Format the changelog entry (you can customize this)
-            CHANGELOG_ENTRY="---\n**Commit:** ${{ github.sha }}\n**Author:** ${{ github.actor }}\n**Date:** $(date -I)\n\n$COMMIT_MESSAGE\n\n"
-
-            # Append the changelog entry to the end of the file
-            echo "$CHANGELOG_ENTRY" >> "$file"
+          
+          # Retrieve the commit message
+          COMMIT_MSG=$(git log -1 --pretty=%B ${COMMIT_SHA})
+          echo "Commit message:"
+          echo "$COMMIT_MSG"
+          
+          # For each Markdown file, append a header and the commit message at the end.
+          for file in $MD_FILES; do
+            echo "" >> "$file"
+            echo "## Commit Message" >> "$file"
+            echo "$COMMIT_MSG" >> "$file"
+            echo "Appended commit message to $file"
           done
 
-      - name: Commit and Push Changes
-        if: steps.get_modified_files.outputs.files != ''
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add .
-          git commit -m "docs: Append changelog to modified MD files [skip ci]"
-          git push origin HEAD:${GITHUB_REF##refs/heads/}
+      # Step 3 (Optional): Commit and push the changes back to the repository.
+      # Uncomment the following step if you want to automatically commit the changes.
+      #
+      # - name: Commit and push changes
+      #   run: |
+      #     git config --global user.name "github-actions[bot]"
+      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #     git add .
+      #     # Commit only if there are changes; otherwise, the commit command will fail.
+      #     git commit -m "Append commit message to modified Markdown files" || echo "No changes to commit."
+      #     git push origin HEAD:${{ github.ref }}
