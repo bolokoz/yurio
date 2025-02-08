@@ -81,3 +81,6 @@ A-resolvéma ipahápe: Aháta nderehe'ỹ
 Aháta nderehe'ỹ
 
 > Voy sin ti
+
+## Changelog:
+ - 08/02/2025: [pat token](https://github.com/bolokoz/yurio/commit/705d54d7f924c0061f3d857217ab5d413461b6ee)
