@@ -3,7 +3,7 @@ name: Append Commit Message to Markdown Files
 on:
   push:
     branches:
-      - main  # Change to your target branch if needed
+      - changelog  # Change to your target branch if needed
 
 jobs:
   append-commit-message:
