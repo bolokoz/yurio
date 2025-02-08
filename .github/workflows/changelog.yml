@@ -1,0 +1,52 @@
+name: Update Changelog in MD Files
+
+on:
+  push:
+    branches:
+      - changelog # or your main branch name (e.g., master, develop)
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Get Modified MD Files
+        id: get_modified_files
+        run: |
+          # Get a list of modified .md files in the latest commit
+          MODIFIED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '\.md$')
+          echo "::set-output name=files::$MODIFIED_FILES"
+
+      - name: Get Commit Message
+        id: get_commit_message
+        run: |
+          COMMIT_MESSAGE=$(git log -1 --pretty=format:'%s%n%n%b') # Short and full message
+          echo "::set-output name=message::$COMMIT_MESSAGE"
+
+      - name: Append Changelog to MD Files
+        if: steps.get_modified_files.outputs.files != ''
+        run: |
+          MODIFIED_FILES="${{ steps.get_modified_files.outputs.files }}"
+          COMMIT_MESSAGE="${{ steps.get_commit_message.outputs.message }}"
+
+          IFS=$'\n' read -r -d '' -a FILES <<< "$MODIFIED_FILES"
+
+          for file in "${FILES[@]}"; do
+            echo "Processing file: $file"
+            # Format the changelog entry (you can customize this)
+            CHANGELOG_ENTRY="---\n**Commit:** ${{ github.sha }}\n**Author:** ${{ github.actor }}\n**Date:** $(date -I)\n\n$COMMIT_MESSAGE\n\n"
+
+            # Append the changelog entry to the end of the file
+            echo "$CHANGELOG_ENTRY" >> "$file"
+          done
+
+      - name: Commit and Push Changes
+        if: steps.get_modified_files.outputs.files != ''
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "docs: Append changelog to modified MD files [skip ci]"
+          git push origin HEAD:${GITHUB_REF##refs/heads/}
