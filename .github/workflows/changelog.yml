@@ -47,14 +47,14 @@ jobs:
             echo "Appended commit message to $file"
           done
 
-      # Step 3 (Optional): Commit and push the changes back to the repository.
-      # Uncomment the following step if you want to automatically commit the changes.
-      #
-      # - name: Commit and push changes
-      #   run: |
-      #     git config --global user.name "github-actions[bot]"
-      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      #     git add .
-      #     # Commit only if there are changes; otherwise, the commit command will fail.
-      #     git commit -m "Append commit message to modified Markdown files" || echo "No changes to commit."
-      #     git push origin HEAD:${{ github.ref }}
+      Step 3 (Optional): Commit and push the changes back to the repository.
+      Uncomment the following step if you want to automatically commit the changes.
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          # Commit only if there are changes; otherwise, the commit command will fail.
+          git commit -m "Append commit message to modified Markdown files" || echo "No changes to commit."
+          git push origin HEAD:${{ github.ref }}

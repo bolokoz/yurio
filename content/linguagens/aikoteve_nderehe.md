@@ -15,6 +15,7 @@ tags:
 ## Letra em guarani
 
 Aikoteve nderehe
+_eu preciso de voce_
 
 mitare mi vida
 
