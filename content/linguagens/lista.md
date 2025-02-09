@@ -575,3 +575,5 @@ title: Lista de paravras para taduzir
 | zest          	|           	|         	|         	|          	|         	|
 | zigzag        	|           	|         	|         	|          	|         	|
 | zoom          	|           	|         	|         	|          	|         	|
+## Changelog:
+ - 09/02/2025: [new porject list](https://github.com/bolokoz/yurio/commit/406838efa3a0c4d37c54bd4eeb2d0c6f456052f5)
