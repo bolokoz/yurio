@@ -1,14 +1,15 @@
 ---
-title: Lista de paravras para taduzir
+title: 500 words
 ---
 
 ## Tabela
 
 | English       	| Português 	| Español 	| Deutsch 	| Japanese 	| Guarani 	|
 |---------------	|-----------	|---------	|---------	|----------	|---------	|
-| time          	|tempo         	|tiempo     |zeit      	|          	|ara       	|
+| time          	|tempo      	|tiempo    |zeit      |          	|ara      	|
 | person        	|           	|         	|         	|          	|         	|
 | year          	|           	|         	|         	|          	|         	|
+| tree          	|a árvore   	|el árbol 	|der Baum 	| ki - 木  	|yvyra     |
 | way           	|           	|         	|         	|          	|         	|
 | day           	|           	|         	|         	|          	|         	|
 | thing         	|           	|         	|         	|          	|         	|
