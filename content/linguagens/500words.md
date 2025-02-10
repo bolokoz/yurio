@@ -578,3 +578,4 @@ title: 500 words
 | zoom          	|           	|         	|         	|          	|         	|
 ## Changelog:
  - 09/02/2025: [new porject list](https://github.com/bolokoz/yurio/commit/406838efa3a0c4d37c54bd4eeb2d0c6f456052f5)
+ - 10/02/2025: [Update and rename lista.md to 500words.md](https://github.com/bolokoz/yurio/commit/0dca23f2c38dd904fb9542dccec86ece25c6333e)
