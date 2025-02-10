@@ -10,3 +10,6 @@ Desta vez experimentando:
 
 Futuramente queria adicionar:
 - inspira ui
+
+## Changelog:
+ - 10/02/2025: [Update README.md](https://github.com/bolokoz/yurio/commit/44db0ef8e1edcd30d8f13427d30619aa8d8199bc)
