@@ -1,344 +1,234 @@
 <script setup>
-import { ProductService } from '~~/service/ProductService';
 import { onMounted, ref, watch } from 'vue';
-import {useLayout} from "~~/layouts/composables/layout.js";
+import { useLayout } from "~~/layouts/composables/layout.js";
 
 const { getPrimary, getSurface, isDarkTheme } = useLayout();
 
-const products = ref(null);
-const chartData = ref(null);
-const chartOptions = ref(null);
-
-const items = ref([
-  { label: 'Add New', icon: 'pi pi-fw pi-plus' },
-  { label: 'Remove', icon: 'pi pi-fw pi-trash' }
+const featuredPosts = ref([
+  {
+    title: "Building Modern Web Applications",
+    excerpt: "Learn how to create scalable and maintainable web applications using the latest technologies.",
+    date: "2024-04-01",
+    image: "https://picsum.photos/800/400?random=1",
+    category: "Development"
+  },
+  {
+    title: "The Future of AI in Software",
+    excerpt: "Exploring how artificial intelligence is transforming the software development landscape.",
+    date: "2024-03-28",
+    image: "https://picsum.photos/800/400?random=2",
+    category: "Technology"
+  },
+  {
+    title: "Mastering CSS Grid Layout",
+    excerpt: "A comprehensive guide to creating complex layouts with CSS Grid.",
+    date: "2024-03-25",
+    image: "https://picsum.photos/800/400?random=3",
+    category: "Design"
+  }
 ]);
 
+const timelinePosts = ref([
+  {
+    title: "Introduction to Vue 3 Composition API",
+    date: "2024-04-02",
+    category: "Vue.js"
+  },
+  {
+    title: "Getting Started with Nuxt 3",
+    date: "2024-04-01",
+    category: "Nuxt.js"
+  },
+  {
+    title: "Advanced TypeScript Patterns",
+    date: "2024-03-30",
+    category: "TypeScript"
+  },
+  {
+    title: "Responsive Design Best Practices",
+    date: "2024-03-29",
+    category: "CSS"
+  },
+  {
+    title: "State Management with Pinia",
+    date: "2024-03-28",
+    category: "Vue.js"
+  }
+]);
+
+// Floating shapes animation
+const shapes = ref([]);
 onMounted(() => {
-  ProductService.getProductsSmall().then((data) => (products.value = data));
-  chartData.value = setChartData();
-  chartOptions.value = setChartOptions();
+  createShapes();
 });
 
-function setChartData() {
-  const documentStyle = getComputedStyle(document.documentElement);
-
-  return {
-    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-    datasets: [
-      {
-        type: 'bar',
-        label: 'Subscriptions',
-        backgroundColor: documentStyle.getPropertyValue('--p-primary-400'),
-        data: [4000, 10000, 15000, 4000],
-        barThickness: 32
-      },
-      {
-        type: 'bar',
-        label: 'Advertising',
-        backgroundColor: documentStyle.getPropertyValue('--p-primary-300'),
-        data: [2100, 8400, 2400, 7500],
-        barThickness: 32
-      },
-      {
-        type: 'bar',
-        label: 'Affiliate',
-        backgroundColor: documentStyle.getPropertyValue('--p-primary-200'),
-        data: [4100, 5200, 3400, 7400],
-        borderRadius: {
-          topLeft: 8,
-          topRight: 8
-        },
-        borderSkipped: true,
-        barThickness: 32
-      }
-    ]
+function createShapes() {
+  const shapeTypes = ['circle', 'triangle', 'square', 'pentagon'];
+  const colorClasses = {
+    primary: 'bg-primary-500/20 dark:bg-primary-400/10',
+    secondary: 'bg-secondary-500/20 dark:bg-secondary-400/10',
+    success: 'bg-green-500/20 dark:bg-green-400/10',
+    info: 'bg-blue-500/20 dark:bg-blue-400/10',
+    warning: 'bg-orange-500/20 dark:bg-orange-400/10'
   };
+  
+  shapes.value = Array.from({ length: 15 }, (_, i) => ({
+    id: i,
+    type: shapeTypes[Math.floor(Math.random() * shapeTypes.length)],
+    colorClass: Object.values(colorClasses)[Math.floor(Math.random() * Object.keys(colorClasses).length)],
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: 20 + Math.random() * 40,
+    speed: 0.5 + Math.random() * 2,
+    direction: Math.random() * Math.PI * 2
+  }));
 }
-
-function setChartOptions() {
-  const documentStyle = getComputedStyle(document.documentElement);
-  const borderColor = documentStyle.getPropertyValue('--surface-border');
-  const textMutedColor = documentStyle.getPropertyValue('--text-color-secondary');
-
-  return {
-    maintainAspectRatio: false,
-    aspectRatio: 0.8,
-    scales: {
-      x: {
-        stacked: true,
-        ticks: {
-          color: textMutedColor
-        },
-        grid: {
-          color: 'transparent',
-          borderColor: 'transparent'
-        }
-      },
-      y: {
-        stacked: true,
-        ticks: {
-          color: textMutedColor
-        },
-        grid: {
-          color: borderColor,
-          borderColor: 'transparent',
-          drawTicks: false
-        }
-      }
-    }
-  };
-}
-
-const formatCurrency = (value) => {
-  return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-};
 
 watch([getPrimary, getSurface, isDarkTheme], () => {
-  chartData.value = setChartData();
-  chartOptions.value = setChartOptions();
+  // Update theme-dependent styles if needed
 });
 </script>
 
 <template>
-  <div class="grid grid-cols-12 gap-8">
-    <div class="col-span-12 lg:col-span-6 xl:col-span-3">
-      <div class="card mb-0">
-        <div class="flex justify-between mb-4">
-          <div>
-            <span class="block text-muted-color font-medium mb-4">Orders</span>
-            <div class="text-surface-900 dark:text-surface-0 font-medium text-xl">152</div>
-          </div>
-          <div class="flex items-center justify-center bg-blue-100 dark:bg-blue-400/10 rounded-border" style="width: 2.5rem; height: 2.5rem">
-            <i class="pi pi-shopping-cart text-blue-500 !text-xl"></i>
-          </div>
-        </div>
-        <span class="text-primary font-medium">24 new </span>
-        <span class="text-muted-color">since last visit</span>
-      </div>
-    </div>
-    <div class="col-span-12 lg:col-span-6 xl:col-span-3">
-      <div class="card mb-0">
-        <div class="flex justify-between mb-4">
-          <div>
-            <span class="block text-muted-color font-medium mb-4">Revenue</span>
-            <div class="text-surface-900 dark:text-surface-0 font-medium text-xl">$2.100</div>
-          </div>
-          <div class="flex items-center justify-center bg-orange-100 dark:bg-orange-400/10 rounded-border" style="width: 2.5rem; height: 2.5rem">
-            <i class="pi pi-dollar text-orange-500 !text-xl"></i>
-          </div>
-        </div>
-        <span class="text-primary font-medium">%52+ </span>
-        <span class="text-muted-color">since last week</span>
-      </div>
-    </div>
-    <div class="col-span-12 lg:col-span-6 xl:col-span-3">
-      <div class="card mb-0">
-        <div class="flex justify-between mb-4">
-          <div>
-            <span class="block text-muted-color font-medium mb-4">Customers</span>
-            <div class="text-surface-900 dark:text-surface-0 font-medium text-xl">28441</div>
-          </div>
-          <div class="flex items-center justify-center bg-cyan-100 dark:bg-cyan-400/10 rounded-border" style="width: 2.5rem; height: 2.5rem">
-            <i class="pi pi-users text-cyan-500 !text-xl"></i>
-          </div>
-        </div>
-        <span class="text-primary font-medium">520 </span>
-        <span class="text-muted-color">newly registered</span>
-      </div>
-    </div>
-    <div class="col-span-12 lg:col-span-6 xl:col-span-3">
-      <div class="card mb-0">
-        <div class="flex justify-between mb-4">
-          <div>
-            <span class="block text-muted-color font-medium mb-4">Comments</span>
-            <div class="text-surface-900 dark:text-surface-0 font-medium text-xl">152 Unread</div>
-          </div>
-          <div class="flex items-center justify-center bg-purple-100 dark:bg-purple-400/10 rounded-border" style="width: 2.5rem; height: 2.5rem">
-            <i class="pi pi-comment text-purple-500 !text-xl"></i>
-          </div>
-        </div>
-        <span class="text-primary font-medium">85 </span>
-        <span class="text-muted-color">responded</span>
+  <div class="relative min-h-screen overflow-hidden bg-surface-0 dark:bg-surface-900">
+    <!-- Floating Shapes -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div v-for="shape in shapes" :key="shape.id" 
+           :class="[
+             'absolute transform transition-transform duration-[20s] ease-linear animate-float blur-sm',
+             shape.colorClass,
+             shape.type === 'circle' ? 'rounded-full' : 
+             shape.type === 'triangle' ? 'clip-triangle' :
+             shape.type === 'square' ? 'rounded-lg' : 'clip-pentagon'
+           ]"
+           :style="{
+             width: `${shape.size}px`,
+             height: `${shape.size}px`,
+             left: `${shape.x}%`,
+             top: `${shape.y}%`,
+             animationDelay: `${shape.id * -2}s`,
+             opacity: '0.5'
+           }">
       </div>
     </div>
 
-    <div class="col-span-12 xl:col-span-6">
-      <div class="card">
-        <div class="font-semibold text-xl mb-4">Recent Sales</div>
-        <DataTable :value="products" :rows="5" :paginator="true" responsiveLayout="scroll">
-          <Column style="width: 15%" header="Image">
-            <template #body="slotProps">
-              <img :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`" :alt="slotProps.data.image" width="50" class="shadow" />
-            </template>
-          </Column>
-          <Column field="name" header="Name" :sortable="true" style="width: 35%"></Column>
-          <Column field="price" header="Price" :sortable="true" style="width: 35%">
-            <template #body="slotProps">
-              {{ formatCurrency(slotProps.data.price) }}
-            </template>
-          </Column>
-          <Column style="width: 15%" header="View">
-            <template #body>
-              <Button icon="pi pi-search" type="button" class="p-button-text"></Button>
-            </template>
-          </Column>
-        </DataTable>
+    <!-- Hero Section -->
+    <div class="relative z-10 container mx-auto px-4 py-16">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent animate-fade-in">
+          Boloko blog
+        </h1>
+        <p class="text-xl text-surface-600 dark:text-surface-400 animate-slide-up">
+          Tentando evitar meu alzheimer
+        </p>
       </div>
-      <div class="card">
-        <div class="flex justify-between items-center mb-6">
-          <div class="font-semibold text-xl">Best Selling Products</div>
-          <div>
-            <Button icon="pi pi-ellipsis-v" class="p-button-text p-button-plain p-button-rounded" @click="$refs.menu2.toggle($event)"></Button>
-            <Menu ref="menu2" :popup="true" :model="items" class="!min-w-40"></Menu>
+
+      <!-- Featured Posts -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold mb-8 text-surface-900 dark:text-surface-0">Featured Posts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div v-for="(post, index) in featuredPosts" :key="index"
+               class="group bg-surface-50 dark:bg-surface-800 rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <div class="relative h-48 overflow-hidden">
+              <img :src="post.image" :alt="post.title" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <span class="absolute bottom-4 left-4 text-white text-sm font-medium bg-primary-500/80 px-3 py-1 rounded-full">
+                {{ post.category }}
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-surface-900 dark:text-surface-0">{{ post.title }}</h3>
+              <p class="text-surface-600 dark:text-surface-400 mb-4">{{ post.excerpt }}</p>
+              <div class="flex items-center text-sm text-surface-500 dark:text-surface-400">
+                <i class="pi pi-calendar mr-2"></i>
+                {{ new Date(post.date).toLocaleDateString() }}
+              </div>
+            </div>
           </div>
         </div>
-        <ul class="list-none p-0 m-0">
-          <li class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <span class="text-surface-900 dark:text-surface-0 font-medium mr-2 mb-1 md:mb-0">Space T-Shirt</span>
-              <div class="mt-1 text-muted-color">Clothing</div>
-            </div>
-            <div class="mt-2 md:mt-0 flex items-center">
-              <div class="bg-surface-300 dark:bg-surface-500 rounded-border overflow-hidden w-40 lg:w-24" style="height: 8px">
-                <div class="bg-orange-500 h-full" style="width: 50%"></div>
-              </div>
-              <span class="text-orange-500 ml-4 font-medium">%50</span>
-            </div>
-          </li>
-          <li class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <span class="text-surface-900 dark:text-surface-0 font-medium mr-2 mb-1 md:mb-0">Portal Sticker</span>
-              <div class="mt-1 text-muted-color">Accessories</div>
-            </div>
-            <div class="mt-2 md:mt-0 ml-0 md:ml-20 flex items-center">
-              <div class="bg-surface-300 dark:bg-surface-500 rounded-border overflow-hidden w-40 lg:w-24" style="height: 8px">
-                <div class="bg-cyan-500 h-full" style="width: 16%"></div>
-              </div>
-              <span class="text-cyan-500 ml-4 font-medium">%16</span>
-            </div>
-          </li>
-          <li class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <span class="text-surface-900 dark:text-surface-0 font-medium mr-2 mb-1 md:mb-0">Supernova Sticker</span>
-              <div class="mt-1 text-muted-color">Accessories</div>
-            </div>
-            <div class="mt-2 md:mt-0 ml-0 md:ml-20 flex items-center">
-              <div class="bg-surface-300 dark:bg-surface-500 rounded-border overflow-hidden w-40 lg:w-24" style="height: 8px">
-                <div class="bg-pink-500 h-full" style="width: 67%"></div>
-              </div>
-              <span class="text-pink-500 ml-4 font-medium">%67</span>
-            </div>
-          </li>
-          <li class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <span class="text-surface-900 dark:text-surface-0 font-medium mr-2 mb-1 md:mb-0">Wonders Notebook</span>
-              <div class="mt-1 text-muted-color">Office</div>
-            </div>
-            <div class="mt-2 md:mt-0 ml-0 md:ml-20 flex items-center">
-              <div class="bg-surface-300 dark:bg-surface-500 rounded-border overflow-hidden w-40 lg:w-24" style="height: 8px">
-                <div class="bg-green-500 h-full" style="width: 35%"></div>
-              </div>
-              <span class="text-primary ml-4 font-medium">%35</span>
-            </div>
-          </li>
-          <li class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <span class="text-surface-900 dark:text-surface-0 font-medium mr-2 mb-1 md:mb-0">Mat Black Case</span>
-              <div class="mt-1 text-muted-color">Accessories</div>
-            </div>
-            <div class="mt-2 md:mt-0 ml-0 md:ml-20 flex items-center">
-              <div class="bg-surface-300 dark:bg-surface-500 rounded-border overflow-hidden w-40 lg:w-24" style="height: 8px">
-                <div class="bg-purple-500 h-full" style="width: 75%"></div>
-              </div>
-              <span class="text-purple-500 ml-4 font-medium">%75</span>
-            </div>
-          </li>
-          <li class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <span class="text-surface-900 dark:text-surface-0 font-medium mr-2 mb-1 md:mb-0">Robots T-Shirt</span>
-              <div class="mt-1 text-muted-color">Clothing</div>
-            </div>
-            <div class="mt-2 md:mt-0 ml-0 md:ml-20 flex items-center">
-              <div class="bg-surface-300 dark:bg-surface-500 rounded-border overflow-hidden w-40 lg:w-24" style="height: 8px">
-                <div class="bg-teal-500 h-full" style="width: 40%"></div>
-              </div>
-              <span class="text-teal-500 ml-4 font-medium">%40</span>
-            </div>
-          </li>
-        </ul>
       </div>
-    </div>
-    <div class="col-span-12 xl:col-span-6">
-      <div class="card">
-        <div class="font-semibold text-xl mb-4">Revenue Stream</div>
-        <Chart type="bar" :data="chartData" :options="chartOptions" class="h-80" />
-      </div>
-      <div class="card">
-        <div class="flex items-center justify-between mb-6">
-          <div class="font-semibold text-xl">Notifications</div>
-          <div>
-            <Button icon="pi pi-ellipsis-v" class="p-button-text p-button-plain p-button-rounded" @click="$refs.menu1.toggle($event)"></Button>
-            <Menu ref="menu1" :popup="true" :model="items" class="!min-w-40"></Menu>
+
+      <!-- Timeline -->
+      <div class="relative">
+        <h2 class="text-3xl font-bold mb-8 text-surface-900 dark:text-surface-0">Latest Posts</h2>
+        <div class="relative pl-8 border-l-2 border-primary-500 space-y-10">
+          <div v-for="(post, index) in timelinePosts" :key="index"
+               class="relative transform transition-all duration-300 hover:-translate-y-1">
+            <div class="absolute -left-10 mt-1.5 h-4 w-4 rounded-full border-2 border-primary-500 bg-surface-0 dark:bg-surface-900"></div>
+            <div class="bg-surface-50 dark:bg-surface-800 p-6 rounded-xl shadow-lg">
+              <span class="inline-block bg-secondary-500/20 dark:bg-secondary-400/10 text-secondary-700 dark:text-secondary-400 text-sm font-medium px-3 py-1 rounded-full mb-2">
+                {{ post.category }}
+              </span>
+              <h3 class="text-lg font-semibold mb-2 text-surface-900 dark:text-surface-0">{{ post.title }}</h3>
+              <div class="flex items-center text-sm text-surface-500 dark:text-surface-400">
+                <i class="pi pi-calendar mr-2"></i>
+                {{ new Date(post.date).toLocaleDateString() }}
+              </div>
+            </div>
           </div>
         </div>
-
-        <span class="block text-muted-color font-medium mb-4">TODAY</span>
-        <ul class="p-0 mx-0 mt-0 mb-6 list-none">
-          <li class="flex items-center py-2 border-b border-surface">
-            <div class="w-12 h-12 flex items-center justify-center bg-blue-100 dark:bg-blue-400/10 rounded-full mr-4 shrink-0">
-              <i class="pi pi-dollar !text-xl text-blue-500"></i>
-            </div>
-            <span class="text-surface-900 dark:text-surface-0 leading-normal"
-            >Richard Jones
-                            <span class="text-surface-700 dark:text-surface-100">has purchased a blue t-shirt for <span class="text-primary font-bold">$79.00</span></span>
-                        </span>
-          </li>
-          <li class="flex items-center py-2">
-            <div class="w-12 h-12 flex items-center justify-center bg-orange-100 dark:bg-orange-400/10 rounded-full mr-4 shrink-0">
-              <i class="pi pi-download !text-xl text-orange-500"></i>
-            </div>
-            <span class="text-surface-700 dark:text-surface-100 leading-normal">Your request for withdrawal of <span class="text-primary font-bold">$2500.00</span> has been initiated.</span>
-          </li>
-        </ul>
-
-        <span class="block text-muted-color font-medium mb-4">YESTERDAY</span>
-        <ul class="p-0 m-0 list-none mb-6">
-          <li class="flex items-center py-2 border-b border-surface">
-            <div class="w-12 h-12 flex items-center justify-center bg-blue-100 dark:bg-blue-400/10 rounded-full mr-4 shrink-0">
-              <i class="pi pi-dollar !text-xl text-blue-500"></i>
-            </div>
-            <span class="text-surface-900 dark:text-surface-0 leading-normal"
-            >Keyser Wick
-                            <span class="text-surface-700 dark:text-surface-100">has purchased a black jacket for <span class="text-primary font-bold">$59.00</span></span>
-                        </span>
-          </li>
-          <li class="flex items-center py-2 border-b border-surface">
-            <div class="w-12 h-12 flex items-center justify-center bg-pink-100 dark:bg-pink-400/10 rounded-full mr-4 shrink-0">
-              <i class="pi pi-question !text-xl text-pink-500"></i>
-            </div>
-            <span class="text-surface-900 dark:text-surface-0 leading-normal"
-            >Jane Davis
-                            <span class="text-surface-700 dark:text-surface-100">has posted a new questions about your product.</span>
-                        </span>
-          </li>
-        </ul>
-        <span class="block text-muted-color font-medium mb-4">LAST WEEK</span>
-        <ul class="p-0 m-0 list-none">
-          <li class="flex items-center py-2 border-b border-surface">
-            <div class="w-12 h-12 flex items-center justify-center bg-green-100 dark:bg-green-400/10 rounded-full mr-4 shrink-0">
-              <i class="pi pi-arrow-up !text-xl text-green-500"></i>
-            </div>
-            <span class="text-surface-900 dark:text-surface-0 leading-normal">Your revenue has increased by <span class="text-primary font-bold">%25</span>.</span>
-          </li>
-          <li class="flex items-center py-2 border-b border-surface">
-            <div class="w-12 h-12 flex items-center justify-center bg-purple-100 dark:bg-purple-400/10 rounded-full mr-4 shrink-0">
-              <i class="pi pi-heart !text-xl text-purple-500"></i>
-            </div>
-            <span class="text-surface-900 dark:text-surface-0 leading-normal"><span class="text-primary font-bold">12</span> users have added your products to their wishlist.</span>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.animate-float {
+  animation: float 20s linear infinite;
+  will-change: transform;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out;
+}
+
+.clip-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.clip-pentagon {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(50px, 50px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translate(100px, 0px) rotate(180deg) scale(1);
+  }
+  75% {
+    transform: translate(50px, -50px) rotate(270deg) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>

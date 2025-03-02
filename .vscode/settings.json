@@ -1,6 +1,5 @@
 {
     "emmet.includeLanguages": {
-        "vue": "html",
         "vue-html": "html"
     },
     "tailwindCSS.emmetCompletions": true,
