@@ -27,8 +27,8 @@ jobs:
           COMMIT_SHA="${GITHUB_SHA}"
           echo "Processing commit: ${COMMIT_SHA}"
           
-          # List Markdown files modified in this commit.
-          MD_FILES=$(git diff-tree --no-commit-id --name-only -r ${COMMIT_SHA} | grep -E '\.md$' || true)
+          # List Markdown files modified in this commit, excluding deleted files.
+          MD_FILES=$(git diff-tree --no-commit-id --name-status -r ${COMMIT_SHA} | grep -E '^[AM]\s+.*\.md$' | cut -f2- || true)
           echo "Modified Markdown files: ${MD_FILES}"
           
           if [ -z "$MD_FILES" ]; then
