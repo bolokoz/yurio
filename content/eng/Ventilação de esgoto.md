@@ -1,10 +1,11 @@
 ---
 date: '2025-03-02'
 title: Ventilação de esgoto
-description: ''
-tags: []
-cover: ''
+description: 'Para que serve e como funciona?'
+tags: [engenharia, hidrossanitaria]
+cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1738353393/furushow7/image_zhzxhx.png
 publish: true
+featured: true
 permalink: /engventilacao-de-esgoto
 ---
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1738353393/furushow7/image_zhzxhx.png)

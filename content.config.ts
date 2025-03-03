@@ -9,7 +9,7 @@ export default defineContentConfig({
         prefix: '/content/',
       },
       schema: z.object({
-        tags: z.array(z.string()),
+        tags: z.array(z.string()).optional(),
         cover: z.string(),
         date: z.date(),
         title: z.string(),
@@ -18,6 +18,11 @@ export default defineContentConfig({
           z.literal('true').transform(() => true),
           z.literal('false').transform(() => false),
           z.boolean(),
+        ]),
+        featured: z.union([
+          z.literal('true').transform(() => true),
+          z.literal('false').transform(() => false),
+          z.boolean().optional(),
         ]),
       })
     })

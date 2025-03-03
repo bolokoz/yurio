@@ -8,33 +8,14 @@ const { getPrimary, getSurface, isDarkTheme } = useLayout();
 
 // Replace the static timelinePosts with dynamic content
 
-const { data: timelinePosts } = await useAsyncData(route.path, () => {
+const { data: timelinePosts } = await useAsyncData('latest', () => {
   return queryCollection("content").where('publish', '=', true).order('date', 'DESC').limit(5).all()
   });
 
-const featuredPosts = ref([
-  {
-    title: "Building Modern Web Applications",
-    excerpt: "Learn how to create scalable and maintainable web applications using the latest technologies.",
-    date: "2024-04-01",
-    image: "https://picsum.photos/800/400?random=1",
-    category: "Development"
-  },
-  {
-    title: "The Future of AI in Software",
-    excerpt: "Exploring how artificial intelligence is transforming the software development landscape.",
-    date: "2024-03-28",
-    image: "https://picsum.photos/800/400?random=2",
-    category: "Technology"
-  },
-  {
-    title: "Mastering CSS Grid Layout",
-    excerpt: "A comprehensive guide to creating complex layouts with CSS Grid.",
-    date: "2024-03-25",
-    image: "https://picsum.photos/800/400?random=3",
-    category: "Design"
-  }
-]);
+  const { data: featuredPosts2 } = await useAsyncData('featured', () => {
+  return queryCollection("content").where('featured', '=', true).order('date', 'DESC').limit(3).all()
+  });
+
 
 // Floating shapes animation
 const shapes = ref([]);
@@ -107,24 +88,22 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
       <div class="mb-20">
         <h2 class="text-3xl font-bold mb-8 text-surface-900 dark:text-surface-0">Featured Posts</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="(post, index) in featuredPosts" :key="index"
-               class="group bg-surface-50 dark:bg-surface-800 rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <NuxtLink  v-for="(post, index) in featuredPosts2" :key="index" :to="post.path" 
+               class="group bg-surface-50 dark:bg-surface-800 rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl" >
             <div class="relative h-48 overflow-hidden">
-              <img :src="post.image" :alt="post.title" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110">
+              <img :src="post.cover" :alt="post.title" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              <span class="absolute bottom-4 left-4 text-white text-sm font-medium bg-primary-500/80 px-3 py-1 rounded-full">
-                {{ post.tags }}
-              </span>
             </div>
             <div class="p-6">
+              <Tag v-for="(tag, index) in post.tags" value="Primary" rounded> {{ tag }}</Tag>
               <h3 class="text-xl font-bold mb-2 text-surface-900 dark:text-surface-0">{{ post.title }}</h3>
-              <p class="text-surface-600 dark:text-surface-400 mb-4">{{ post.excerpt }}</p>
+              <p class="text-surface-600 dark:text-surface-400 mb-4">{{ post.description }}</p>
               <div class="flex items-center text-sm text-surface-500 dark:text-surface-400">
                 <i class="pi pi-calendar mr-2"></i>
                 {{ new Date(post.date).toLocaleDateString() }}
               </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </div>
 
