@@ -72,3 +72,6 @@ Performance: For large SVG files, consider the performance implications of this 
 ### Conclusion
 
 Converting SVG to PNG using JavaScript and canvas is a powerful technique that can be integrated into web applications for dynamic image manipulation. By following these steps, developers can effectively translate the versatility of SVGs into the wide compatibility of PNGs.
+
+## Changelog:
+ - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)

@@ -30,3 +30,6 @@ Também já me perdi novamente. Parece que o ponto é se divertir procurando o b
 Vi um post de um brasileiro usando quartz e resolvi testar. Integra com o Obsidian que sempre quis usar mas nunca tinha dado certo por não poder usar no wsl do windows junto com git.
 
 
+
+## Changelog:
+ - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)

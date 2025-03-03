@@ -62,3 +62,6 @@ Com a ferramenta [Tina.io](https://www.tina.io) é possível adicionar ou modifi
 8. Notion é bem simples e facilita a escrita diária mas para publicar também não encontrei opções legais
    1. 
    
+
+## Changelog:
+ - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)

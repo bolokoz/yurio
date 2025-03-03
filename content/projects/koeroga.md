@@ -197,3 +197,6 @@ Supondo folha de porta de 80cm, os montantes terão 80cm de espaçamento.
 
 
 Nesta modulação os tubos hidrossanitários da cozinha e banheiro poderiam se concentrar em uma parede. Talvez assim facilitando durante fabricação e futuras manutenções. Concentra os pontos de atenção em uma parede apenas.
+
+## Changelog:
+ - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)

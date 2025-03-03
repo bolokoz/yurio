@@ -584,3 +584,4 @@ permalink: /linguagens500words
 ## Changelog:
  - 09/02/2025: [new porject list](https://github.com/bolokoz/yurio/commit/406838efa3a0c4d37c54bd4eeb2d0c6f456052f5)
  - 10/02/2025: [Update and rename lista.md to 500words.md](https://github.com/bolokoz/yurio/commit/0dca23f2c38dd904fb9542dccec86ece25c6333e)
+ - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)

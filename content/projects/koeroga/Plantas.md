@@ -118,3 +118,6 @@ https://www.youtube.com/watch?v=PsWQ11FEamk&list=PLPUJTQzXlfyAZKEjnkb9VhIUImi1ju
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1735872570/furushow7/image_ohjngm.png)
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1735872610/furushow7/image_bq1nqg.png)
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1735872620/furushow7/image_ogyvyv.png)
+
+## Changelog:
+ - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)

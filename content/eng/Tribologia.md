@@ -83,3 +83,5 @@ O ideal é Lambda = 2 porque fica na parte de menor fricção
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1730049413/furushow7/image_aeofmc.png)
 
 Para Lambda > 3 pode ser usado para operações que precisam absorver choques, vibrações excessivas ou Start-Stop
+## Changelog:
+ - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)

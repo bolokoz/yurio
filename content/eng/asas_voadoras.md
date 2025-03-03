@@ -24,3 +24,6 @@ Analisando para aviação comercial de passageiros
 4. Dificil adaptar para linha de montagem 
 5. Sacrifica sustentação para ter estabilidade (trim drag)
 6. Rolagem e arfagem precária por estar perto do centro de gravidade
+
+## Changelog:
+ - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)
