@@ -1,6 +1,11 @@
 ---
-modified: 2025-01-04T16:50:36-03:00
-created: 2025-01-03T22:05:01-03:00
+date: '2025-03-02'
+title: Vedações
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectskoerogavedacoes
 ---
 ## Boas práticas 
 

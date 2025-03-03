@@ -1,6 +1,11 @@
 ---
-modified: 2025-01-23T22:26:15-03:00
-created: 2025-01-23T21:52:36-03:00
+date: '2025-03-02'
+title: Negociações
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectschecklistsnegociacoes
 ---
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1737679964/furushow7/image_drkewv.png)
 

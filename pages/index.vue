@@ -1,8 +1,16 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue';
 import { useLayout } from "~~/layouts/composables/layout.js";
+const route = useRoute();
+// import { useAsyncData, queryContent } from '#imports';
 
 const { getPrimary, getSurface, isDarkTheme } = useLayout();
+
+// Replace the static timelinePosts with dynamic content
+
+const { data: timelinePosts } = await useAsyncData(route.path, () => {
+  return queryCollection("content").where('publish', '=', true).order('date', 'DESC').limit(5).all()
+  });
 
 const featuredPosts = ref([
   {
@@ -25,34 +33,6 @@ const featuredPosts = ref([
     date: "2024-03-25",
     image: "https://picsum.photos/800/400?random=3",
     category: "Design"
-  }
-]);
-
-const timelinePosts = ref([
-  {
-    title: "Introduction to Vue 3 Composition API",
-    date: "2024-04-02",
-    category: "Vue.js"
-  },
-  {
-    title: "Getting Started with Nuxt 3",
-    date: "2024-04-01",
-    category: "Nuxt.js"
-  },
-  {
-    title: "Advanced TypeScript Patterns",
-    date: "2024-03-30",
-    category: "TypeScript"
-  },
-  {
-    title: "Responsive Design Best Practices",
-    date: "2024-03-29",
-    category: "CSS"
-  },
-  {
-    title: "State Management with Pinia",
-    date: "2024-03-28",
-    category: "Vue.js"
   }
 ]);
 
@@ -133,7 +113,7 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
               <img :src="post.image" :alt="post.title" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110">
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <span class="absolute bottom-4 left-4 text-white text-sm font-medium bg-primary-500/80 px-3 py-1 rounded-full">
-                {{ post.category }}
+                {{ post.tags }}
               </span>
             </div>
             <div class="p-6">
@@ -152,19 +132,23 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
       <div class="relative">
         <h2 class="text-3xl font-bold mb-8 text-surface-900 dark:text-surface-0">Latest Posts</h2>
         <div class="relative pl-8 border-l-2 border-primary-500 space-y-10">
-          <div v-for="(post, index) in timelinePosts" :key="index"
+          <div v-for="post in timelinePosts" :key="post.path"
                class="relative transform transition-all duration-300 hover:-translate-y-1">
             <div class="absolute -left-10 mt-1.5 h-4 w-4 rounded-full border-2 border-primary-500 bg-surface-0 dark:bg-surface-900"></div>
-            <div class="bg-surface-50 dark:bg-surface-800 p-6 rounded-xl shadow-lg">
+            <NuxtLink :to="post.path" 
+                     class="block bg-surface-50 dark:bg-surface-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <span class="inline-block bg-secondary-500/20 dark:bg-secondary-400/10 text-secondary-700 dark:text-secondary-400 text-sm font-medium px-3 py-1 rounded-full mb-2">
-                {{ post.category }}
+                {{ post.tags[0] || '' }}
               </span>
               <h3 class="text-lg font-semibold mb-2 text-surface-900 dark:text-surface-0">{{ post.title }}</h3>
+              <p v-if="post.description" class="text-surface-600 dark:text-surface-400 mb-2 line-clamp-2">
+                {{ post.description }}
+              </p>
               <div class="flex items-center text-sm text-surface-500 dark:text-surface-400">
                 <i class="pi pi-calendar mr-2"></i>
-                {{ new Date(post.date).toLocaleDateString() }}
+                {{ new Date(post.date).toLocaleDateString("pt-BR") }}
               </div>
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </div>

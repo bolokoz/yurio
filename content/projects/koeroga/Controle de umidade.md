@@ -1,6 +1,11 @@
 ---
-modified: 2025-01-03T23:46:40-03:00
-created: 2025-01-03T22:30:33-03:00
+date: '2025-03-02'
+title: Controle de umidade
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectskoerogacontrole-de-umidade
 ---
 ### Regras de ouro
 

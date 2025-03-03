@@ -1,13 +1,12 @@
 ---
-title: "How to convert a SVG to PNG using Canvas"
-description: "A simple way to convert a SVG to PNG using Canvas"
-published: 2023/11/22
-slug: "how-to-convert-a-svg-to-png-using-canvas"
-tags:
-   - web
-   - svg
+date: '2025-03-02'
+title: How To Convert A Svg To Png Using Canvas
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /devhow-to-convert-a-svg-to-png-using-canvas
 ---
-
 > This article was created using ChatGPT and meant as a placeholder
 
 Converting an SVG to a PNG in JavaScript using a canvas element is a handy technique for web developers who need to manipulate vector graphics for various applications. This process essentially involves rendering an SVG image onto a canvas and then converting the canvas to a PNG format. Here's a step-by-step guide on how to achieve this:

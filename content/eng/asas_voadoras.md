@@ -1,7 +1,12 @@
 ---
-title: Asas voadoras - Flying wings
+date: '2025-03-02'
+title: Asas Voadoras
+description: ''
+tags: [engenharia/aeronautiaca, mecanica ]
+cover: ''
+publish: true
+permalink: /asas-voadoras
 ---
-
 Analisando para aviação comercial de passageiros
 
 ## Vantagens

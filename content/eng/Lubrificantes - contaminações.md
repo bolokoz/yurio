@@ -1,6 +1,11 @@
 ---
-modified: 2024-11-30T21:11:38-04:00
-created: 2024-11-29T21:29:46-03:00
+date: '2025-03-02'
+title: Contaminações em lubrificantes
+description: ''
+tags: [lubrificantes, quimica, engenharia]
+cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1733012981/furushow7/image_cs41uv.png)
+publish: true
+permalink: /lubrificantes-contaminacoes
 ---
 ## Contaminação por água
 ### Hidrólise - Estabilidade hidrolítica

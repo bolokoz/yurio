@@ -1,17 +1,12 @@
 ---
-title: Lubrificantes automotivos
-date: 2024-10-23
-category:
-  - tribologia
-tags:
-  - lubrificantes
-  - viscosidade
-cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1729650767/furushow7/image_pguykv.png
-image: https://res.cloudinary.com/boloko/image/upload/f_auto/v1729650767/furushow7/image_pguykv.png
-modified: 2024-11-13T00:27:38-03:00
-created: 2024-10-25T23:48:28-03:00
+date: '2025-03-02'
+title: Lubrificantes
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /englubrificantes-automotivos
 ---
-
 # Lubrificantes
 Óleos lubrificantes formam uma fina película entre as duas superfícies reduzindo contato direto e desta forma minimizando atrito e desgaste. Também serve para dissipar calor e proteger contra corrosão.
 

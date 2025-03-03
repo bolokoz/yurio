@@ -1,3 +1,12 @@
+---
+date: '2025-03-02'
+title: O que é ShadowSocks e pra que serve?
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /devshadowsocks-no-synology
+---
 # O que é ShadowSocks e pra que serve?
 
 ![[ShadowSocks no Synology.png]]

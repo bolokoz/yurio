@@ -1,28 +1,12 @@
 ---
-# This is the title of the article
-title: Koeroga - casas prefabricadas
-# You can customize cover image
-cover: /assets/images/cover1.jpg
-# This is the icon of the page
-icon: house
-# This control sidebar order
-order: 1
-# Set writing time
-date: 2023-05-01
-# A page can have multiple categories
-category:
-  - Projects
-# A page can have multiple tags
-tag:
-  - engenharia, empreendedorismo
-# this page is sticky in article list
-sticky: false
-# this page will appear in starred articles
-star: true
-sidebar: heading
-sidebarDepth: 3
+date: '2025-03-02'
+title: Koeroga
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectskoeroga
 ---
-
 Aqui tentarei montar um teste de viabilidade de uma indústria de fábrica de casas pré fabricadas em minha região atual (Mato grosso do Sul).
 
 [[toc]]

@@ -1,13 +1,12 @@
 ---
-created: 2025-01-22T23:14:24-03:00
-aliases:
-  - "Project:"
-tags:
-  - Project/
-createdAt: 2025-01-22
-modified: 2025-01-22T23:17:15-03:00
+date: '2025-03-02'
+title: 🚀 Project ->
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /templatesprojetos
 ---
-
 # 🚀 Project -> 
 ___
 ## 🧾 Project Description

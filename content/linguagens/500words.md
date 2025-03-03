@@ -1,7 +1,12 @@
 ---
-title: 500 words
+date: '2025-03-02'
+title: 500words
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /linguagens500words
 ---
-
 ## Tabela
 
 | English       	| Português 	| Español 	| Deutsch 	| Japanese 	| Guarani 	|

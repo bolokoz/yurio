@@ -1,9 +1,12 @@
 ---
-modified: 2024-11-13T00:23:04-03:00
-created: 2024-11-13T00:02:24-03:00
+date: '2025-03-02'
+title: Óleos basicos
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /engoleos-basicos
 ---
-
-
 Tudo começa com petróleo cru 
 
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1731467463/furushow7/image_cgiegf.png)

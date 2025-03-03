@@ -1,13 +1,12 @@
 ---
-created: 2025-01-22T23:16:04-03:00
-aliases:
-  - "Project:"
-tags:
-  - Project/
-createdAt: 2025-01-22
-modified: 2025-01-22T23:29:12-03:00
+date: '2025-03-02'
+title: 🚀 Koeroga
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectskoeroga
 ---
-
 # 🚀 Koeroga 
 ___
 ## 🧾 Project Description

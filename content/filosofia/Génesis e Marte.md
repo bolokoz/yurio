@@ -1,3 +1,12 @@
+---
+date: '2025-03-02'
+title: Génesis e marte
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /filosofiagenesis-e-marte
+---
 Depois de ver um vídeo do CodyLab, um dos finalistas para missão de explorar Marte:
 
 Humanidad esta caminhando para explorar Marte. Argumentos a favor é de preservar a espécie no caso catástrofe ocorrer na Terra e estudar evidencias anteriores indicando vida.

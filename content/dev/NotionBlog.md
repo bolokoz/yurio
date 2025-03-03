@@ -1,3 +1,12 @@
+---
+date: '2025-03-02'
+title: Notionblog
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /devnotionblog
+---
 Tentei pegar um projeto pronto do github que pegaria suas notas do Notion e transformaria em um site mas é em chines
 
 Normalmente eu assustaria e iria embora porque não da para entender nada, mas dessa vez vou tentar.

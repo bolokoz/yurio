@@ -1,6 +1,11 @@
 ---
-modified: 2024-11-22T15:37:50-04:00
-created: 2024-11-22T15:11:26-04:00
+date: '2025-03-02'
+title: Helvetica e outras fontes
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /filosofiahelvetica-e-outras-fontes
 ---
 Por que Helvetica tem tanto charme?
 

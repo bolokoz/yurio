@@ -1,13 +1,11 @@
 ---
-category:
-  - tribologia
-date: 2024-10-27
-createdAt: 2024-10-27
-tags:
-  - tribologia
-  - atrito
-  - lubrificantes
-  - viscosidade
+date: '2025-03-02'
+title: O que é tribologia
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /engtribologia
 ---
 # O que é tribologia
 Tribologia é o campo multidisciplinar que estuda fricção, desgaste e lubrificação entre superfícies que interagem em movimento. Tem objetivo de extender vida útil e evitar perdas de energia principalmente através do uso de lubrificantes

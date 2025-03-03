@@ -1,14 +1,12 @@
 ---
+date: '2025-03-02'
 title: Ajavy
-description: Javy = errar
-slug: ajavy
-createdAt: 2024-07-24T19:21:49.040Z
-category:
-  - Linguagens
-tags:
-  - Guarani
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink:
 ---
-
 Ajavy = errei
 Ojavy = errou
 

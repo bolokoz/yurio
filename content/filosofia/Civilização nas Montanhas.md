@@ -1,8 +1,12 @@
 ---
-modified: 2025-01-02T23:41:46-03:00
-created: 2025-01-02T20:02:57-03:00
+date: '2025-03-02'
+title: Civilização nas montanhas
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /filosofiacivilizacao-nas-montanhas
 ---
-
 https://www.youtube.com/watch?v=OgdAtUlc-Z0
 
 Por que apesar de todas as dificuldades de se viver nas montanhas muitas civilizações se desenvolveram nelas?

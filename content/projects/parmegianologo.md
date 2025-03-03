@@ -1,13 +1,12 @@
 ---
-  title: Parmegianólogo
-  date: 2019-01-01
-  description: Avaliação de Parmegianas
-  image: string
-  finished: false
-  category: 
-    - Parmegianologo
+date: '2025-03-02'
+title: Parmegianologo
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectsparmegianologo
 ---
-
 ## Resumo TLDR
 ::card
 

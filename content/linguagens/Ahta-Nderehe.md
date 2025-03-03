@@ -1,15 +1,12 @@
 ---
-title: Aháta Nderehe'ỹ
-description: Pablo Barrios y Su Conjunto Paraguayo
-date: 2024-07-20T04:00:00.000Z
-category:
-  - Linguagens
-tags:
-  - Guarani
-  - Tradução
-  - Música
+date: '2025-03-02'
+title: Ahta Nderehe
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /linguagensahta-nderehe
 ---
-
 Ahátamante chave, ñane tapỹi ahejáta
 
 > Voy ,,, nuestro ... dejaré

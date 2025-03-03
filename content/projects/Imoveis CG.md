@@ -1,6 +1,11 @@
 ---
-modified: 2025-01-15T15:55:07-04:00
-created: 2025-01-15T15:52:31-04:00
+date: '2025-03-02'
+title: Imoveis cg
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectsimoveis-cg
 ---
 Site com AI para fazer anuncios de imoveis 
 A princípio será gratis para trazer clientes

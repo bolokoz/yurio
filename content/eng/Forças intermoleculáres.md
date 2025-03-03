@@ -1,6 +1,11 @@
 ---
-modified: 2024-10-30T00:48:25-03:00
-created: 2024-10-30T00:23:26-03:00
+date: '2025-10-30'
+title: Forças intermoleculáres
+description: Revisao das forcas intermoleculares
+tags: [quimica, revisao]
+cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1730258930/furushow7/image_ggvvgh.png
+publish: true
+permalink: /forcas-intermoleculares
 ---
 ## Ligações
 

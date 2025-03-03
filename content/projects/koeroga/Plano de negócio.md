@@ -1,6 +1,11 @@
 ---
-modified: 2025-01-23T01:31:28-03:00
-created: 2025-01-22T23:08:01-03:00
+date: '2025-03-02'
+title: Plano de negócio
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectskoerogaplano-de-negocio
 ---
 ## Referência
 

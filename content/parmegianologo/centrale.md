@@ -1,4 +1,13 @@
 ---
+date: '2025-03-02'
+title: Centrale
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /parmegianologocentrale
+---
+---
 nota: 3
 justificativa: asdfoasidjfaos
 images: asdfasdfoj

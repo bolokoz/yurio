@@ -1,10 +1,11 @@
 ---
-modified: 2024-11-13T10:23:36-03:00
-created: 2024-11-12T00:09:37-03:00
-category:
-  - tribologia
-tags:
-  - lubrificantes
+date: '2025-03-02'
+title: Lubrificantes sintéticos
+description: ''
+tags: [lubrificantes]
+cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1731382387/furushow7/image_zatgkh.png
+publish: true
+permalink: /lubrificantes-sinteticos
 ---
 Em teoria deveriam ser óleo totalmente sintéticos, ou seja, fabricados. No entanto óleos de categoria 3, que é um óleo bruto refinado também é considerado sintético 
 

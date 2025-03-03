@@ -1,9 +1,11 @@
 ---
-modified: 2025-01-24T00:15:17-03:00
-created: 2025-01-23T22:50:02-03:00
-category:
-  - investimentos
-published: true
+date: '2025-03-02'
+title: Taxa de juros no brasil
+description: ''
+tags: []
+cover: ''
+publish: true
+permalink: /blogstaxa-de-juros-no-brasil
 ---
 ## Por que a taxa de juros é tão alta
 

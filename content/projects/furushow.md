@@ -1,9 +1,12 @@
 ---
-title: Furushow site e blog
-date: 2024-07-01
-cover:
+date: '2025-03-02'
+title: Este site e blog
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectsfurushow
 ---
-
 # Este site e blog
 
 ## Definição e diferenciais

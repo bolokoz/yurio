@@ -1,3 +1,12 @@
+---
+date: '2025-03-02'
+title: O que é Port Forward - redirecionamento de porta
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /devconfigurar-port-forward
+---
 # O que é Port Forward - redirecionamento de porta
 
 Todo modem tem um IP externo

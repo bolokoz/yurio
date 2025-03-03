@@ -1,8 +1,12 @@
 ---
-modified: 2025-01-02T23:53:43-03:00
-created: 2025-01-01T21:13:27-03:00
+date: '2025-03-02'
+title: Plantas
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /projectskoerogaplantas
 ---
-
 ## 35m² - frente 5,6m
 https://www.youtube.com/watch?v=kmmNMzMeoco&list=PLPUJTQzXlfyAZKEjnkb9VhIUImi1juDgr
 

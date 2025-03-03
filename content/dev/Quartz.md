@@ -1,3 +1,12 @@
+---
+date: '2025-03-02'
+title: Quartz e Obsidian
+description: ''
+tags: []
+cover: ''
+publish: false
+permalink: /devquartz
+---
 # Quartz e Obsidian
 
 Sempre quis armazenar meu conhecimento porque parece que esqueço das coisas muito fácil.

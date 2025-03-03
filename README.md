@@ -1,3 +1,11 @@
+---
+title: Yurio readme
+date: 2025-03-02
+description: Dados do projeto do Yur.io
+category: [documentation]
+---
+
+
 # website pessoal
 Tentativa de n32
 
