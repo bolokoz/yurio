@@ -33,6 +33,8 @@ const { data: surround } = await useAsyncData('documents-list', () => {
       :subtitle="content.description"
     ></YurioTitle>
 
+    <BubblesBg class="h-96 w-full" />
+
     <ContentRenderer v-if="content" :value="content">
       
       <h2>{{ content.title }}</h2>

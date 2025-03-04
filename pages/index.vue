@@ -1,7 +1,12 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue';
 import { useLayout } from "~~/layouts/composables/layout.js";
+import { Motion } from "motion-v";
+
 const route = useRoute();
+
+const isDark = computed(() => useColorMode().value == "dark");
+
 // import { useAsyncData, queryContent } from '#imports';
 
 const { getPrimary, getSurface, isDarkTheme } = useLayout();
@@ -73,7 +78,16 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
       </div>
     </div>
 
-    <!-- Hero Section -->
+    <div class="relative flex h-96 flex-col items-center justify-center">
+    <FallingStarsBg
+      class="bg-white dark:bg-black"
+      :color="isDark ? '#FFF' : '#555'"
+    />
+    <div class="z-[1] flex items-center">
+      <span class="text-6xl font-bold text-black dark:text-white">Inspira UI</span>
+    </div>
+  </div>
+
     <div class="relative z-10 container mx-auto px-4 py-16">
       <div class="text-center mb-16">
         <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent animate-fade-in">
