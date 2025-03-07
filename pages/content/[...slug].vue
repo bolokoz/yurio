@@ -33,7 +33,14 @@ const { data: surround } = await useAsyncData('documents-list', () => {
       :subtitle="content.description"
     ></YurioTitle>
 
-    <BubblesBg class="h-96 w-full" />
+    <!-- <ScrollIsland title="Index">
+      <div class="my-5 flex flex-col gap-2">
+        <a href="#api"># API</a>
+        <a href="#component-code"># Component Code</a>
+        <a href="#features"># Features</a>
+        <a href="#credits"># Credits</a>
+      </div>
+    </ScrollIsland> -->
 
     <ContentRenderer v-if="content" :value="content">
       

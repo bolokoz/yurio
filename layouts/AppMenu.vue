@@ -8,7 +8,7 @@ const { data: contentNavigation } = await useAsyncData("navigation", () => {
   return queryCollectionNavigation("content");
 });
 const menuItens = computed(() => {
-//   console.log("value", contentNavigation.value[0]);
+  //   console.log("value", contentNavigation.value[0]);
   // Ensure data is available and has the expected structure
   if (
     !contentNavigation.value[0] ||
@@ -37,23 +37,31 @@ const model = ref([
   {
     label: "Home",
     items: [
-      { label: "Notes", icon: "pi pi-fw pi-book", to: "/content" },
+      { label: "Home", icon: "pi pi-fw pi-home", to: "/" },
       {
-        label: "Parmegianologo",
-        icon: "pi pi-fw pi-heart-fill",
-        to: "/parmegianologo",
+        label: "Notes", icon: "pi pi-fw pi-book",
+        items: [
+          { label: "Tags", icon: "pi pi-fw pi-book", to: "/content/tags" },
+          { label: "Timeline", icon: "pi pi-fw pi-book", to: "/content/timeline" },
+        ]
       },
-      { label: "Demo Dashboard", icon: "pi pi-fw pi-home", to: "/" },
+      { label: "Portfolio", icon: "pi pi-fw pi-home", to: "/portfolio" },
+
     ],
+  },
+  {
+    label: "Projetos atuais",
+
+    items: [{
+      label: "Parmegianologo",
+      icon: "pi pi-fw pi-heart-fill",
+      to: "/parmegianologo",
+    },
+    ]
   },
   {
     label: "Mini apps",
     items: [
-      {
-        label: "Parmegianologo",
-        icon: "pi pi-fw pi-food",
-        to: "/parmegianologo",
-      },
       {
         label: "Engenharia",
         icon: "pi pi-fw pi-user",
@@ -89,23 +97,19 @@ const model = ref([
                     <span class="ml-2 text-color">{{ item.label }}</span>
                 </NuxtLink>
             </template>
-    </PanelMenu> -->
+</PanelMenu> -->
     <template v-for="(item, i) in model" :key="item">
+      <app-menu-item v-if="!item.separator" :item="item" :index="i"></app-menu-item>
+      <li v-if="item.separator" class="menu-separator"></li>
+    </template>
+    <!-- <template v-for="(item, i) in menuItens" :key="item">
       <app-menu-item
         v-if="!item.separator"
         :item="item"
         :index="i"
       ></app-menu-item>
       <li v-if="item.separator" class="menu-separator"></li>
-    </template>
-    <template v-for="(item, i) in menuItens" :key="item">
-      <app-menu-item
-        v-if="!item.separator"
-        :item="item"
-        :index="i"
-      ></app-menu-item>
-      <li v-if="item.separator" class="menu-separator"></li>
-    </template>
+    </template> -->
   </ul>
 </template>
 

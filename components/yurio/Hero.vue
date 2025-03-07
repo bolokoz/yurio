@@ -22,7 +22,7 @@ const props = defineProps({
         <template #subtitle>{{ subtitle }}</template>
         <template #content>
             <p class="m-0">
-                {{description}}
+                {{ description }}
             </p>
         </template>
         <template #footer>
@@ -32,18 +32,15 @@ const props = defineProps({
             </div>
             <div v-if="changelog">
                 <Panel header="Changelogs" toggleable collapsed>
-    <p class="m-0">
-        <ul>
-            <li v-for="item in changelog" :key="item.date">
-                <strong>{{ item.date }}</strong> - {{ item.description }}
-            </li>
-        </ul>
-    </p>
-</Panel>
+                    <p class="m-0">
+
+                        <li v-for="item in changelog" :key="item.date">
+                            <strong>{{ item.date }}</strong> - {{ item.description }}
+                        </li>
+
+                    </p>
+                </Panel>
             </div>
         </template>
     </Card>
 </template>
-
-
-
