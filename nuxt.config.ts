@@ -1,11 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import Theme from '@primevue/themes/aura';
+import { theme as Theme } from '@primevue/themes/aura';
 
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     ssr:false,
     devtools: {enabled: true},
     modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxtjs/supabase', 'motion-v/nuxt', 'shadcn-nuxt', '@nuxt/image'],
+    content: {
+        preview: {
+            api: 'https://api.nuxt.studio'
+        }
+    },
     css: [
         '@/assets/styles.scss'
     ],
