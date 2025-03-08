@@ -30,6 +30,9 @@
           {{ name }}
         </h3>
         <p class="max-w-lg text-neutral-400">{{ description }}</p>
+        <div>
+          <Tag v-for="tag in tags" :key="tag" :value="tag" rounded></Tag>
+        </div>
       </div>
   
       <div
@@ -41,7 +44,7 @@
           size="sm"
           class="pointer-events-auto"
         >
-          <a :href="href"> {{ cta }} → </a>
+          <NuxtLink :to="href"> {{ cta }} → </NuxtLink>
         </UiButton>
       </div>
       <div
@@ -61,6 +64,7 @@
     description: string;
     href: string;
     cta: string;
+    tags?: string[];
   }
   
   const props = defineProps<Props>();
