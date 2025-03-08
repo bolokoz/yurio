@@ -30,3 +30,4 @@ Analisando para aviação comercial de passageiros
 ## Changelog:
 
 - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)
+ - 08/03/2025: [2 changes by Nuxt Studio](https://github.com/bolokoz/yurio/commit/977b71373821acfbb489a16606c9bf4b48c19a95)
