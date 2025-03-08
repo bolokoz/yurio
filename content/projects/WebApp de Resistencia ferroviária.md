@@ -7,16 +7,18 @@ tags:
   - dev
   - webapp
   - projetos
-cover: "https://res.cloudinary.com/boloko/image/upload/f_auto/v1741375559/furushow7/image_ug2s49.png"
+cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1741375559/furushow7/image_ug2s49.png
 publish: true
 permalink: /projects-resistencia-ferroviaria
-modified: 2025-03-07T15:22:02-04:00
+modified: 2025-03-07T15:36:50-04:00
 created: 2025-03-07T15:17:13-04:00
 ---
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1741375559/furushow7/image_ug2s49.png)
 
 
 [Acesse aqui](https://yuribecker.shinyapps.io/ResistenciaFerroviaria/)
+
+[Projeto no Github](https://github.com/bolokoz/resistenciaRodoviaria)
 
 ## O que é
 
