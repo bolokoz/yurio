@@ -10,14 +10,17 @@ tags:
 cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1741379890/furushow7/image_nwwcrn.png
 publish: true
 permalink: /projects-vitorcardiograma
-modified: 2025-03-07T22:47:47-04:00
+modified: 2025-03-08T16:25:43-04:00
 created: 2025-03-07T15:17:13-04:00
 ---
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1741379890/furushow7/image_nwwcrn.png)
 
+## Links
 
+O aplicativo não está mais na loja pois utilizava um SDK antigo (2016) e agora só está disponível na APKmirror
 [APKPure mirror](https://apkpure.com/br/eixo-cardiograma/com.vitorferrer.eixocardiograma)
 
+Código fonte do aplicativo está no GitHub
 [Projeto no Github](https://github.com/bolokoz/VitorCardiograma)
 
 ## O que é
