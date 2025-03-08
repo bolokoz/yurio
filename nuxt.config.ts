@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     ssr:false,
     devtools: {enabled: true},
-    modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxtjs/supabase', 'motion-v/nuxt', 'shadcn-nuxt', '@nuxt/image', '@nuxthq/studio'],
+    modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxtjs/supabase', 'motion-v/nuxt', 'shadcn-nuxt', '@nuxt/image'],
     css: [
         '@/assets/styles.scss'
     ],

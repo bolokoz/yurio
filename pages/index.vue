@@ -5,9 +5,6 @@ import { Motion } from "motion-v";
 
 const route = useRoute();
 
-// const isDark = computed(() => useColorMode().value == "dark");
-
-// import { useAsyncData, queryContent } from '#imports';
 
 const { getPrimary, getSurface, isDarkTheme } = useLayout();
 
