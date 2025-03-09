@@ -10,12 +10,15 @@ const { getPrimary, getSurface, isDarkTheme } = useLayout();
 
 // Replace the static timelinePosts with dynamic content
 
+const { data: all } = await useAsyncData('all', () => {
+  return queryCollection("content").limit(5).all()
+});
 const { data: timelinePosts } = await useAsyncData('latest', () => {
-  return queryCollection("content").where('publish', '=', true).order('date', 'DESC').limit(5).all()
+  return queryCollection("content").where('publish', '=', 'true').limit(5).all()
 });
 
 const { data: featuredPosts2 } = await useAsyncData('featured', () => {
-  return queryCollection("content").where('featured', '=', true).order('date', 'DESC').limit(3).all()
+  return queryCollection("content").where('featured', '=', 'true').order('date', 'DESC').limit(3).all()
 });
 
 

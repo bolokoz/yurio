@@ -3,7 +3,7 @@
 // Get features from published content in projects folder
 const { data: publishedFeatures } = await useAsyncData('projects', () => {
   return queryCollection("content")
-    .where('publish', '=', true)
+    .where('publish', '=', 'true')
     .all()
 })
 // Transform content data into features format

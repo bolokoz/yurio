@@ -1,9 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import Aura from '@primeuix/themes/aura';// https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
-    ssr:false,
-    devtools: {enabled: true},
+    ssr: false,
+    devtools: { enabled: true },
     modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@nuxt/content', '@nuxtjs/supabase', 'motion-v/nuxt', 'shadcn-nuxt', '@nuxt/image'],
     css: [
         '@/assets/styles.scss'
@@ -20,20 +20,15 @@ export default defineNuxtConfig({
             callback: '/auth/confirm',
             include: ["/parmegianologo/add"],
             exclude: ['/**']
-          }
-      },
+        }
+    },
     primevue: {
         options: {
-            ripple: true,
             theme: {
-                dark: true,
-                options: {
-                    darkModeSelector: '.app-dark'
-                }
+                preset: Aura
             }
         }
     },
-    // plugins: ['~/plugins/primevue.js'],
     app: {
         head: {
             charset: 'utf-8',

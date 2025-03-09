@@ -10,11 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.16",
     "@number-flow/vue": "^0.4.5",
     "@nuxt/content": "3.3.0",
     "@nuxt/image": "1.9.0",
     "@nuxtjs/supabase": "1.5.0",
     "@nuxtjs/tailwindcss": "^6.13.1",
+    "@primeuix/themes": "^1.0.0",
     "@primevue/forms": "^4.3.1",
     "@primevue/themes": "^4.3.1",
     "@vueuse/core": "^12.8.2",
