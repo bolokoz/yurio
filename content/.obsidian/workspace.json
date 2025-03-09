@@ -11,14 +11,13 @@
             "id": "19072ba9fabe3d61",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "projects/Android App - Numerical Analysis.md",
-                "mode": "source",
-                "source": false
+                "file": "content/dev/1.md",
+                "staged": false
               },
-              "icon": "lucide-file",
-              "title": "Android App - Numerical Analysis"
+              "icon": "git-pull-request",
+              "title": "Diff View (1)"
             }
           }
         ],
@@ -183,9 +182,17 @@
   },
   "active": "19072ba9fabe3d61",
   "lastOpenFiles": [
+    "blogs/Livro Never Split the Difference.md",
+    "blogs/Livro Die with Zero.md",
+    "blogs/Taxa de juros no Brasil.md",
+    "dev/1.md",
+    "eng/Resolução exercicio - Madeiras.md",
+    "eng/asas_voadoras.md",
+    "eng/Óleos basicos.md",
+    "eng/Tribologia.md",
+    "eng/Untitled.md",
     "projects/Android App - Numerical Analysis.md",
     "projects/Android App - Vitor Cardiograma.md",
-    "dev/1.md",
     "vinhos/Alma.md",
     "projects/Android",
     "foodrating/1.index.md",
@@ -203,16 +210,8 @@
     "linguagens/lista.md",
     "linguagens/500words.md",
     "dev/Quartz.md",
-    "blogs/Taxa de juros no Brasil.md",
     "dev/202408_todo.md",
     "dev/Configurar Port Forward.md",
-    "dev/2.md",
-    "blogs/4. fetch-content-data-render-pages.md",
-    "blogs/1. connect-namecheap-to-vercel.md",
-    "blogs/2. fix-tailwindcss-intellisense-in-nuxt3.md",
-    "blogs/3. create-namespace-subdomain-connect-to-vercel.md",
-    "blogs/5. vue3-awesome-library.md",
-    "blogs/6. how-to-fix-vuex-type-issue.md",
     "projects/checklists",
     "projects/koeroga",
     "templates",
