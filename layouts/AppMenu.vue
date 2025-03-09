@@ -42,6 +42,7 @@ const model = ref([
       {
         label: "Notes", icon: "pi pi-fw pi-book",
         items: [
+          { label: "Assuntos", icon: "pi pi-fw pi-book", to: "/content/folders" },
           { label: "Tags", icon: "pi pi-fw pi-book", to: "/content/tags" },
           { label: "Timeline", icon: "pi pi-fw pi-book", to: "/content/timeline" },
         ]
@@ -114,12 +115,12 @@ const model = ref([
             to: "/eng/calculadora",
           },
           {
-            label: "teste",
+            label: "Conversor de unidades",
             icon: "pi pi-fw pi-sign-in",
-            to: "/eng/test",
+            to: "/eng/conversor",
           },
           {
-            label: "Calculadora",
+            label: "Calculadora de areas de paredes e teto",
             icon: "pi pi-fw pi-sign-in",
             to: "/eng/estimativa_koeroga",
           },
