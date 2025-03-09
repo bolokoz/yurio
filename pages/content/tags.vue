@@ -2,7 +2,7 @@
 <script setup>
 const { data: posts } = await useAsyncData('all-posts', () => {
   return queryCollection("content")
-    .where('publish', '=', true)
+    .where('publish', '=', 'true')
     .all()
 });
 
