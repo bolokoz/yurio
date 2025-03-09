@@ -8,7 +8,7 @@ tags:
   - android
   - engenharia
   - matematica
-cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1741379890/furushow7/image_nwwcrn.png
+cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1741467764/furushow7/image_vzbbm6.png
 publish: true
 permalink: /projects-numerical-analysis
 modified: 2025-03-08T17:16:41-04:00
