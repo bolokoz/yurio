@@ -2,7 +2,7 @@
 <script setup>
 const { data: posts } = await useAsyncData('timeline-posts', () => {
   return queryCollection("content")
-    .where('publish', '=', true)
+    .where('publish', '=', 'true')
     .order('date', 'DESC')
     .all()
 });

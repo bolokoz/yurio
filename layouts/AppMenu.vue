@@ -38,6 +38,7 @@ const model = ref([
     label: "Home",
     items: [
       { label: "Home", icon: "pi pi-fw pi-home", to: "/" },
+      { label: "Portfolio", icon: "pi pi-fw pi-home", to: "/portfolio" },
       {
         label: "Notes", icon: "pi pi-fw pi-book",
         items: [
@@ -45,18 +46,59 @@ const model = ref([
           { label: "Timeline", icon: "pi pi-fw pi-book", to: "/content/timeline" },
         ]
       },
-      { label: "Portfolio", icon: "pi pi-fw pi-home", to: "/portfolio" },
 
     ],
   },
   {
     label: "Projetos atuais",
-
-    items: [{
-      label: "Parmegianologo",
-      icon: "pi pi-fw pi-heart-fill",
-      to: "/parmegianologo",
-    },
+    items: [
+      { label: "Food ratings",
+        items: [
+          {
+            label: "Parmegianologo",
+            icon: "pi pi-fw pi-heart-fill",
+            to: "/parmegianologo",
+          },
+          {
+            label: "Wines",
+            icon: "pi pi-fw pi-heart-fill",
+            to: "/foodrating/wines",
+          },
+          {
+            label: "Foods",
+            icon: "pi pi-fw pi-heart-fill",
+            to: "/foodrating/foods",
+          },
+        ]
+      },
+      { label: "Linguagens",
+        items: [
+          {
+            label: "500 palavras",
+            icon: "pi pi-fw pi-heart-fill",
+            to: "/",
+          },
+          {
+            label: "Traduzir musicas",
+            icon: "pi pi-fw pi-heart-fill",
+            to: "/foodrating/wines",
+          },
+        ]
+      },
+      { label: "Dev",
+        items: [
+          {
+            label: "Este site",
+            icon: "pi pi-fw pi-heart-fill",
+            to: "/",
+          },
+          {
+            label: "AI stuff",
+            icon: "pi pi-fw pi-heart-fill",
+            to: "/",
+          },
+        ]
+      },
     ]
   },
   {

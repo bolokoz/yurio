@@ -1,5 +1,0 @@
-
-## Changelog:
- - 08/03/2025: [numerical analysis](https://github.com/bolokoz/yurio/commit/72c0d3522544846e823e395815c40d99514039ea)
- - 08/03/2025: [numerical analysis](https://github.com/bolokoz/yurio/commit/72c0d3522544846e823e395815c40d99514039ea)
- - 09/03/2025: [updated cover pic](https://github.com/bolokoz/yurio/commit/9e0dd76dc041cd72d5abe098465a17dc3258c251)
