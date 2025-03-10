@@ -19,3 +19,4 @@ Desta vez experimentando:
 ## Changelog:
  - 10/02/2025: [Update README.md](https://github.com/bolokoz/yurio/commit/44db0ef8e1edcd30d8f13427d30619aa8d8199bc)
  - 02/03/2025: [added default frontmatter to all posts](https://github.com/bolokoz/yurio/commit/9756dc53320db69a162e10b64f310a555bc90f06)
+ - 09/03/2025: [changing directories](https://github.com/bolokoz/yurio/commit/3c54983a72f64b0d48a7752cae38586815b8a158)
