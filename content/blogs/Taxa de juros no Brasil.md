@@ -6,10 +6,11 @@ tags:
   - brasil
   - financas
   - kobuto
+  - youtube
 cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1737683439/furushow7/image_twqgul.png
 publish: true
 permalink: /blogstaxa-de-juros-no-brasil
-modified: 2025-03-09T13:37:03-04:00
+modified: 2025-03-09T15:51:14-04:00
 created: 2025-01-23T21:50:02-04:00
 ---
 ## Por que a taxa de juros é tão alta

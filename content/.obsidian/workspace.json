@@ -13,11 +13,11 @@
             "state": {
               "type": "diff-view",
               "state": {
-                "file": "content/dev/1.md",
+                "file": "content/dev/Configurar Port Forward.md",
                 "staged": false
               },
               "icon": "git-pull-request",
-              "title": "Diff View (1)"
+              "title": "Diff View (Configurar Port Forward)"
             }
           }
         ],
@@ -182,9 +182,16 @@
   },
   "active": "19072ba9fabe3d61",
   "lastOpenFiles": [
+    "dev/202408_todo.md",
+    "dev/Configurar Port Forward.md",
+    "blogs/Civilização nas Montanhas.md",
+    "blogs/Génesis e Marte.md",
+    "blogs/Helvetica e outras fontes.md",
+    "blogs/Taxa de juros no Brasil.md",
     "blogs/Livro Never Split the Difference.md",
     "blogs/Livro Die with Zero.md",
-    "blogs/Taxa de juros no Brasil.md",
+    "filosofia/Civilização nas Montanhas.md",
+    "eng/Flexao_viga_metalica.md",
     "dev/1.md",
     "eng/Resolução exercicio - Madeiras.md",
     "eng/asas_voadoras.md",
@@ -205,13 +212,6 @@
     "blogs/Taxa",
     "projects/furushow.md",
     "projects/edificio_mariano.md",
-    "dev/NotionBlog.md",
-    "eng/Ventilação de esgoto.md",
-    "linguagens/lista.md",
-    "linguagens/500words.md",
-    "dev/Quartz.md",
-    "dev/202408_todo.md",
-    "dev/Configurar Port Forward.md",
     "projects/checklists",
     "projects/koeroga",
     "templates",

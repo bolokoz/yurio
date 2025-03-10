@@ -1,15 +1,23 @@
 ---
-date: '2025-03-02'
+date: 2025-03-02
 title: Génesis e marte
-description: ''
-tags: []
-cover: ''
+description: Sobre vida extraterrestre e habitar marte
+tags:
+  - scifi
+  - filosofia
+  - youtube
+cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1741549604/furushow7/image_y0c3zq.png
 publish: true
-permalink: /filosofiagenesis-e-marte
+permalink: /genesis-e-marte
+modified: 2025-03-09T15:51:18-04:00
+created: 2025-03-09T15:44:53-04:00
 ---
+![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1741549604/furushow7/image_y0c3zq.png)
+
+
 Depois de ver um vídeo do CodyLab, um dos finalistas para missão de explorar Marte:
 
-Humanidad esta caminhando para explorar Marte. Argumentos a favor é de preservar a espécie no caso catástrofe ocorrer na Terra e estudar evidencias anteriores indicando vida.
+Humanidade esta caminhando para explorar Marte. Argumentos a favor é de preservar a espécie no caso catástrofe ocorrer na Terra e estudar evidencias anteriores indicando vida.
 
 O potencial científico caso houver vida marciana poderia ser inimaginável  pois poderiam existir processos inconcebíveis atualmente 
 

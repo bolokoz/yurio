@@ -1,14 +1,20 @@
 ---
-date: '2025-03-02'
+date: 2025-03-02
 title: Civilização nas montanhas
-description: ''
-tags: [filosofia, geografia]
-cover: ''
+description: Por que civilizações prosperam em altitudes elevadas?
+tags:
+  - filosofia
+  - geografia
+  - youtube
+cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1741549524/furushow7/image_w5vbmc.png
 publish: true
-permalink: /filosofiacivilizacao-nas-montanhas
+permalink: /civilizacao-nas-montanhas
+modified: 2025-03-09T15:51:21-04:00
+created: 2025-03-09T15:44:53-04:00
 ---
-https://www.youtube.com/watch?v=OgdAtUlc-Z0
+[video](https://www.youtube.com/watch?v=OgdAtUlc-Z0)
 
+![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1741549524/furushow7/image_w5vbmc.png)
 
 Por que apesar de todas as dificuldades de se viver nas montanhas muitas civilizações se desenvolveram nelas?
 
