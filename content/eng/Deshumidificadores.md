@@ -44,3 +44,5 @@ Com isso podemos entrar na tangente de 'por que não comprar um ar bem mais pote
 5. Ciclos rápidos podem formar gelo em regiões de condensação e bloquear passagem de ar
 
 Isso tem melhorado com a introdução de compressores inveter que invés de desligar totalmente, eles diminuem a potência.
+## Changelog:
+ - 26/04/2025: [vault backup: 2025-04-26 13:57:13](https://github.com/bolokoz/yurio/commit/1a45790627ec9b0a2e87aec3fa64533de013850c)
