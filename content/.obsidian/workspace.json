@@ -11,13 +11,14 @@
             "id": "19072ba9fabe3d61",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "content/dev/Configurar Port Forward.md",
-                "staged": false
+                "file": "eng/Deshumidificadores.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (Configurar Port Forward)"
+              "icon": "lucide-file",
+              "title": "Deshumidificadores"
             }
           }
         ],
@@ -182,6 +183,8 @@
   },
   "active": "19072ba9fabe3d61",
   "lastOpenFiles": [
+    "eng/asas_voadoras.md",
+    "eng/Deshumidificadores.md",
     "dev/202408_todo.md",
     "dev/Configurar Port Forward.md",
     "blogs/Civilização nas Montanhas.md",
@@ -194,10 +197,8 @@
     "eng/Flexao_viga_metalica.md",
     "dev/1.md",
     "eng/Resolução exercicio - Madeiras.md",
-    "eng/asas_voadoras.md",
     "eng/Óleos basicos.md",
     "eng/Tribologia.md",
-    "eng/Untitled.md",
     "projects/Android App - Numerical Analysis.md",
     "projects/Android App - Vitor Cardiograma.md",
     "vinhos/Alma.md",
