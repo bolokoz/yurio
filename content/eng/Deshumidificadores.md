@@ -47,3 +47,4 @@ Com isso podemos entrar na tangente de 'por que não comprar um ar bem mais pote
 Isso tem melhorado com a introdução de compressores inveter que invés de desligar totalmente, eles diminuem a potência.
 ## Changelog:
  - 26/04/2025: [vault backup: 2025-04-26 13:57:13](https://github.com/bolokoz/yurio/commit/1a45790627ec9b0a2e87aec3fa64533de013850c)
+ - 04/05/2025: [vault backup: 2025-05-04 22:13:21](https://github.com/bolokoz/yurio/commit/75dfdfc214190ab4915a4c7d53f9e24b4210aae4)
