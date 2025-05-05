@@ -5,11 +5,12 @@ title: Deshumidificadores
 description: Como funcionam
 tags:
   - engenharia
-  - ar condicionado
+  - ar
+  - condicionado
   - curiosidades
 cover: ""
 publish: true
-permalink: /asas-voadoras
+permalink: /desumidificadores
 ---
 
 Possui a função de diminuir a umidade do ar mas existem diversos fenômenos em torno disso.

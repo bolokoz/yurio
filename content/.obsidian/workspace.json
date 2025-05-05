@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eng/Amonia - Processo Haber-Bosch.md",
+                "file": "eng/Deshumidificadores.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Amonia - Processo Haber-Bosch"
+              "title": "Deshumidificadores"
             },
             "group": "a59cce8676ced6f8"
           }
@@ -35,12 +35,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eng/Amonia - Processo Haber-Bosch.md",
+                "file": "eng/Deshumidificadores.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Amonia - Processo Haber-Bosch"
+              "title": "Deshumidificadores"
             },
             "group": "a59cce8676ced6f8"
           }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "eng/Amonia - Processo Haber-Bosch.md",
+                "file": "eng/Deshumidificadores.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Amonia - Processo Haber-Bosch"
+              "title": "Backlinks for Deshumidificadores"
             }
           },
           {
@@ -137,12 +137,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "eng/Amonia - Processo Haber-Bosch.md",
+                "file": "eng/Deshumidificadores.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Amonia - Processo Haber-Bosch"
+              "title": "Outgoing links from Deshumidificadores"
             }
           },
           {
@@ -204,10 +204,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f22caa2357b1cd3a",
+  "active": "19072ba9fabe3d61",
   "lastOpenFiles": [
-    "eng/Computadores quanticos.md",
     "eng/Amonia - Processo Haber-Bosch.md",
+    "eng/Computadores quanticos.md",
     "eng/Untitled.md",
     "eng/Deshumidificadores.md",
     "eng/asas_voadoras.md",
