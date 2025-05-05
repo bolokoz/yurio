@@ -13,16 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eng/Deshumidificadores.md",
+                "file": "eng/Amonia - Processo Haber-Bosch.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Deshumidificadores"
-            }
+              "title": "Amonia - Processo Haber-Bosch"
+            },
+            "group": "a59cce8676ced6f8"
           }
         ],
         "stacked": true
+      },
+      {
+        "id": "940c66ad71b75842",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55d461332547b999",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "eng/Amonia - Processo Haber-Bosch.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Amonia - Processo Haber-Bosch"
+            },
+            "group": "a59cce8676ced6f8"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -54,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "plantas",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,7 +101,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "b33362422fa4226a",
@@ -95,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/Lubrificantes automotivos.md",
+                "file": "eng/Amonia - Processo Haber-Bosch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +128,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Lubrificantes automotivos"
+              "title": "Backlinks for Amonia - Processo Haber-Bosch"
             }
           },
           {
@@ -114,12 +137,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/Lubrificantes automotivos.md",
+                "file": "eng/Amonia - Processo Haber-Bosch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Lubrificantes automotivos"
+              "title": "Outgoing links from Amonia - Processo Haber-Bosch"
             }
           },
           {
@@ -181,10 +204,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "19072ba9fabe3d61",
+  "active": "f22caa2357b1cd3a",
   "lastOpenFiles": [
-    "eng/asas_voadoras.md",
+    "eng/Computadores quanticos.md",
+    "eng/Amonia - Processo Haber-Bosch.md",
+    "eng/Untitled.md",
     "eng/Deshumidificadores.md",
+    "eng/asas_voadoras.md",
     "dev/202408_todo.md",
     "dev/Configurar Port Forward.md",
     "blogs/Civilização nas Montanhas.md",
@@ -208,11 +234,8 @@
     "foodrating",
     "projects/WebApp de Resistencia ferroviária.md",
     "projects/purahei.md",
-    "projects/koeroga/Isolamento térmico.md",
     "projects/koeroga/Controle",
     "blogs/Taxa",
-    "projects/furushow.md",
-    "projects/edificio_mariano.md",
     "projects/checklists",
     "projects/koeroga",
     "templates",
