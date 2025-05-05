@@ -10,7 +10,7 @@ tags:
 cover: ""
 publish: true
 permalink: /amonia-harber-bosch
-modified: 2025-05-04T22:07:57-04:00
+modified: 2025-05-04T23:59:03-04:00
 created: 2025-05-04T15:34:32-04:00
 ---
 
@@ -22,17 +22,26 @@ O processo Haber-Bosch é um processo industrial para transformar nitrogênio at
 
 Amônia é altamente requisitada e sua principal utilização é como fertilizante. É um processo que não precisa mineração (como era feito antigamente) pois utiliza o nitrogênio presente na atmosfera
 
+![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1746414512/furushow7/image_ivdszd.png)
+
+
 ## Como 
 
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1746409187/furushow7/image_wirhvh.png)
 
 A reação é exotérica e 4 unidades volumétricas produzem 2, portanto para mudar o balanço do equilíbrio precisa de alta pressão e baixa temperatura. A alta pressão também ajuda a cobrir a superfície do catalizador
 
+![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1746413697/furushow7/image_hmt1dn.png)
+
+
 ### Amônia cinza, azul e verde
 
 Para produzir o hidrogênio pode-se utilizar métodos que liberam ou não C02 na atmosfera.
 
 A produção verde utiliza hidrólise da água com _energia renovável_ sem liberar C02 em teoria no processo inteiro
+
+![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1746413853/furushow7/image_inclct.png)
+
 
 A produção cinza e azul utiliza o metano CH4 que libera CO2. Na produção azul esse CO2 é capturado
 
