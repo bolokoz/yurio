@@ -10,7 +10,7 @@ tags:
 cover: ""
 publish: true
 permalink: /amonia-harber-bosch
-modified: 2025-05-04T23:59:03-04:00
+modified: 2025-06-29T19:44:40-04:00
 created: 2025-05-04T15:34:32-04:00
 ---
 

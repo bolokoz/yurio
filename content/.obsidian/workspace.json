@@ -20,8 +20,22 @@
               "icon": "lucide-file",
               "title": "Amonia - Processo Haber-Bosch"
             }
+          },
+          {
+            "id": "dfd43058080457d3",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "content/eng/Untitled.md",
+                "staged": false
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (Untitled)"
+            }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -178,18 +192,20 @@
       "command-palette:Open command palette": false,
       "obsidian-git:Open Git source control": false,
       "modalforms:Edit forms": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "4746b6ef26f1bd4c",
+  "active": "dfd43058080457d3",
   "lastOpenFiles": [
+    "eng/Câmber negativo.md",
     "Fontes GaN.md",
-    "eng/asas_voadoras.md",
     "eng/Untitled 1.md",
+    "dev/1.md",
+    "eng/asas_voadoras.md",
     "eng/Deshumidificadores.md",
     "eng/Amonia - Processo Haber-Bosch.md",
     "eng/Computadores quanticos.md",
-    "eng/Untitled.md",
     "dev/202408_todo.md",
     "dev/Configurar Port Forward.md",
     "blogs/Civilização nas Montanhas.md",
@@ -200,7 +216,6 @@
     "blogs/Livro Die with Zero.md",
     "filosofia/Civilização nas Montanhas.md",
     "eng/Flexao_viga_metalica.md",
-    "dev/1.md",
     "eng/Resolução exercicio - Madeiras.md",
     "eng/Óleos basicos.md",
     "eng/Tribologia.md",
