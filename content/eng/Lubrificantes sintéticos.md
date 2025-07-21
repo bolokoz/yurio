@@ -1,11 +1,14 @@
 ---
-date: '2025-03-02'
+date: 2025-03-02
 title: Lubrificantes sintéticos
-description: ''
-tags: [lubrificantes]
+description: ""
+tags:
+  - lubrificantes
 cover: https://res.cloudinary.com/boloko/image/upload/f_auto/v1731382387/furushow7/image_zatgkh.png
 publish: true
 permalink: /lubrificantes-sinteticos
+modified: 2025-07-21T08:20:15-04:00
+created: 2025-01-15T15:51:30-04:00
 ---
 Em teoria deveriam ser óleo totalmente sintéticos, ou seja, fabricados. No entanto óleos de categoria 3, que é um óleo bruto refinado também é considerado sintético 
 
@@ -65,9 +68,13 @@ Necessita de catalisador de cobalto que está em alta demanda devido baterias de
 
 
 ### Diferenças de performance entre PAO e minerais
+
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1731466361/furushow7/image_omhfdv.png)
 
+![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1753036845/furushow7/image_kqpvwj.png)
 
 ### Vale a pena pagar mais caro?
+
+É uma percepção
 
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1731468390/furushow7/image_fppeqc.png)

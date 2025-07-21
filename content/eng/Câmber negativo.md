@@ -1,3 +1,7 @@
+---
+modified: 2025-06-29T19:46:14-04:00
+created: 2025-05-04T21:27:56-04:00
+---
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1751240041/furushow7/image_yrfn4b.png)
 
 ## O que
