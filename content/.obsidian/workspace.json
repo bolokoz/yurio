@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eng/Lubrificantes sintéticos.md",
+                "file": "dev/1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lubrificantes sintéticos"
+              "title": "1"
             }
           }
         ],
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "eng/Lubrificantes sintéticos.md",
+                "file": "dev/1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lubrificantes sintéticos"
+              "title": "Outline of 1"
             }
           },
           {
@@ -182,8 +182,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f22caa2357b1cd3a",
+  "active": "4118d152b33811a0",
   "lastOpenFiles": [
+    "eng/Lubrificantes sintéticos.md",
     "eng/Óleos basicos e grupos.md",
     "eng/Lubrificantes automotivos.md",
     "eng/Lubrificantes - contaminações.md",
@@ -192,9 +193,9 @@
     "eng/Resolução exercicio - Madeiras.md",
     "eng/Untitled 1.md",
     "eng/Amonia",
-    "Especificacoes_lubrificantes.md",
+    "eng/Especificacoes_lubrificantes.md",
     "eng/Câmber negativo.md",
-    "Fontes GaN.md",
+    "eng/Fontes GaN.md",
     "dev/1.md",
     "eng/asas_voadoras.md",
     "eng/Amonia - Processo Haber-Bosch.md",
@@ -210,7 +211,6 @@
     "filosofia/Civilização nas Montanhas.md",
     "eng/Tribologia.md",
     "projects/Android App - Numerical Analysis.md",
-    "projects/Android App - Vitor Cardiograma.md",
     "projects/Android",
     "foodrating",
     "projects/koeroga/Controle",
