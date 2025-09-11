@@ -1,11 +1,13 @@
 ---
-date: '2025-03-02'
+date: 2025-03-02
 title: 🚀 Project ->
-description: ''
+description: ""
 tags: []
-cover: ''
+cover: ""
 publish: false
 permalink: /templatesprojetos
+modified: 2025-08-25T23:08:45-04:00
+created: 2025-01-22T22:14:24-04:00
 ---
 # 🚀 Project -> 
 ___

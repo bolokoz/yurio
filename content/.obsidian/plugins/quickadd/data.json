@@ -8,6 +8,36 @@
       "macroId": "25e4cf4e-5e9d-4187-ad1d-037d3b12e388"
     },
     {
+      "id": "a3dd3db2-6f19-4e4c-a837-2f99464af978",
+      "name": "Novo Vinho",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/vinhos_v1.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:NAME}} - {{VALUE:DATE}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "vinhos"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "source",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": false
+    },
+    {
       "id": "9571e338-db2d-4d9e-a9f9-3338be4560af",
       "name": "modal",
       "type": "Capture",
@@ -143,7 +173,7 @@
   "devMode": false,
   "templateFolderPath": "templates",
   "announceUpdates": false,
-  "version": "0.14.0",
+  "version": "1.11.1",
   "disableOnlineFeatures": true,
   "enableRibbonIcon": true,
   "ai": {
@@ -207,6 +237,6 @@
     "incrementFileNameSettingMoveToDefaultBehavior": true,
     "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
     "setVersionAfterUpdateModalRelease": true,
-    "addDefaultAIProviders": false
+    "addDefaultAIProviders": true
   }
 }

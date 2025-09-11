@@ -3,6 +3,9 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "published": "checkbox"
+    "published": "checkbox",
+    "restaurante": "multitext",
+    "nota": "number",
+    "carne": "number"
   }
 }
