@@ -11,10 +11,14 @@
             "id": "772c465074ee0390",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "projects/koeroga/Koeroga.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Koeroga"
             }
           }
         ],
@@ -71,8 +75,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -111,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "eng/Amonia - Processo Haber-Bosch.md",
+                "file": "projects/koeroga/Koeroga.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Amonia - Processo Haber-Bosch"
+              "title": "Outgoing links from Koeroga"
             }
           },
           {
@@ -140,12 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "projects/koeroga/Koeroga.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Koeroga"
             }
           },
           {
@@ -335,7 +339,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -356,11 +360,14 @@
       "quickadd:QuickAdd": false
     }
   },
-  "active": "b2f84956be3cfc27",
+  "active": "f22caa2357b1cd3a",
   "lastOpenFiles": [
-    "projects/koeroga/100 Days.md",
-    "projects/koeroga/Koeroga.md",
     "Scope.md",
+    "projects/koeroga/Koeroga.md",
+    "projects/koeroga/koeroga_v1.md",
+    "Untitled 1.base",
+    "Untitled.base",
+    "projects/koeroga/100 Days.md",
     "projects/koeroga/100",
     "eng/Fontes",
     "templates/projetos.md",
@@ -372,8 +379,6 @@
     "vinhos/teste - 02",
     "vinhos",
     "Untitled 2.base",
-    "Untitled 1.base",
-    "Untitled.base",
     "parmegianologo/Mr.Parmegiana.md",
     "parmegianologo/Parmegianologo.base",
     "eng/Lubrificantes sintéticos.md",
@@ -392,7 +397,6 @@
     "eng/asas_voadoras.md",
     "eng/Amonia - Processo Haber-Bosch.md",
     "eng/Computadores quanticos.md",
-    "dev/202408_todo.md",
-    "dev/Configurar Port Forward.md"
+    "dev/202408_todo.md"
   ]
 }
