@@ -1,5 +1,5 @@
 ---
-modified: 2025-09-10T21:51:32-04:00
+modified: 2025-09-14T17:22:06-04:00
 created: 2025-09-10T20:34:06-04:00
 ---
 
@@ -30,7 +30,9 @@ created: 2025-09-10T20:34:06-04:00
 ### Week 1: Market Research & Analysis (Days 1-7)
 
 - **Day 1**: Define your prefab house niche (tiny homes, ADUs, luxury pods, etc.)
+	> 14/09/2025 defining [scope](projects/koeroga/Koeroga.md#scope) and [business model](projects/koeroga/Koeroga.md#businessmodel)
 - **Day 2**: Research target market demographics and housing needs
+	> 14/09/2025 defining [target maket](projects/koeroga/Koeroga.md#target_market) and [roi](projects/koeroga/Koeroga.md#roi) and [cost estimation](projects/koeroga/Koeroga.md#cost_estimation)
 - **Day 3**: Analyze 15+ competitors (designs, pricing, construction methods)
 - **Day 4**: Study local housing market trends and pricing
 - **Day 5**: Research land availability and site requirements
