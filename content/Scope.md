@@ -67,3 +67,5 @@ Introduce affordable, mobile tiny homes as a **fast, flexible housing solution**
 - Payback period per unit: < 3 years.
     
 - Number of units deployed in year 1: 10–20.
+## Changelog:
+ - 14/09/2025: [vault backup: 2025-09-14 17:23:42](https://github.com/bolokoz/yurio/commit/388b92ba0d041ff3cabaf79c475f9ae19f60a936)

@@ -526,3 +526,6 @@ Example with **Base Scenario** (R$90k unit, R$1,200 rent):
 
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1757884767/furushow7/image_weolbf.png)
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1757884873/furushow7/image_abf3f3.png)
+
+## Changelog:
+ - 14/09/2025: [vault backup: 2025-09-14 17:23:42](https://github.com/bolokoz/yurio/commit/388b92ba0d041ff3cabaf79c475f9ae19f60a936)
