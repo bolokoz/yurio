@@ -9,7 +9,7 @@ tags:
 cover: ""
 publish: true
 permalink: /computadores-quanticos
-modified: 2025-05-04T21:29:39-04:00
+modified: 2025-12-23T21:24:26-03:00
 created: 2025-05-04T15:34:32-04:00
 ---
 
