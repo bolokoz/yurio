@@ -54,3 +54,5 @@ Pegasse a primeira amostra e verifica-se inicialmente se o ângulo foi correto e
 ![](https://res.cloudinary.com/boloko/image/upload/f_auto/v1766536760/furushow7/image_fhtaqs.png)
 
 O processo é bem manual. Faz-se diversos wafers. Depois cortam-se variados quadrados com moldes desses wafers. Em seguida diversos processos de polimento com abrasivos e classificação para que todos tenham uma espessura e tamanhos bem definidos
+## Changelog:
+ - 23/12/2025: [vault backup: 2025-12-23 22:47:03](https://github.com/bolokoz/yurio/commit/acbabafde8f8abdae12bcaf21c4eca5b7f714716)
